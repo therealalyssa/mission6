@@ -1,15 +1,6 @@
 FROM node:alpine
-
-RUN mkdir /index
-WORKDIR /index
-
-COPY ./package.json ./
-COPY ./package-lock.json ./
-
-RUN npm install
-
+WORKDIR /usr/src/app
+COPY package*.json .
+RUN npm ci
 COPY . .
-
-EXPOSE 5007
-
-CMD [ "index.js" ]
+CMD [ "npm","start" ]
