@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "Name": "Mac Book Air",
+    "description": "Quality product",
+    "quantity": 1154
+  },
+  {
+    "id": 2,
+    "Name": "Dell Laptop",
+    "description": "good product",
+    "quantity": 1154
+  },
+  { "id": 3,
+    "Name": "HP Laptop",
+    "description": "good for the office and home",
+    "quantity": 55
+  }
+]
