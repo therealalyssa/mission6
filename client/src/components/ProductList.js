@@ -1,87 +1,41 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
- 
-const Record = (props) => (
- <tr>
-   <td>{props.product.name}</td>
-   <td>{props.product.description}</td>
-   <td>{props.product.quantity}</td>
-   <td>
-     <Link className="btn btn-link" to={`/edit/${props.product._id}`}>Edit</Link> |
-     <button className="btn btn-link"
-       onClick={() => {
-         props.deleteRecord(props.product._id);
-       }}
-     >
-       Delete
-     </button>
-   </td>
- </tr>
-);
- 
-export default function ProductList() {
- const [records, setRecords] = useState([]);
- 
- // This method fetches the records from the database.
- useEffect(() => {
-   async function getRecords() {
-     const response = await fetch(`http://localhost:5001/products/`);
- 
-     if (!response.ok) {
-       const message = `An error occurred: ${response.statusText}`;
-       window.alert(message);
-       return;
-     }
- 
-     const records = await response.json();
-     setRecords(records);
-   }
- 
-   getRecords();
- 
-   return;
- }, [records.length]);
 
-  // This method will delete a record
-  async function deleteRecord(id) {
-    await fetch(`http://localhost:5001/${id}`, {
-      method: "DELETE"
-    });
+import axios from "axios";
+import { useState, useEffect } from "react";
+
+const ProductList = () => {
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:5001/products`)
+      .then((response) => {
+        setProducts(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   
-    const newRecords = records.filter((el) => el._id !== id);
-    setRecords(newRecords);
-  }
- 
- 
- // This method will map out the records on the table
- function recordList() {
-   return records.map((record) => {
-     return (
-       <Record
-         record={record}
-         deleteRecord={() => deleteRecord(record._id)}
-         key={record._id}
-       />
-     );
-   });
- }
- 
- // This following section will display the table with the records of individuals.
- return (
-   <div>
-     <h3>Record List</h3>
-     <table className="table table-striped" style={{ marginTop: 20 }}>
-       <thead>
-         <tr>
-           <th>Name</th>
-           <th>Position</th>
-           <th>Level</th>
-           <th>Action</th>
-         </tr>
-       </thead>
-       <tbody>{recordList()}</tbody>
-     </table>
-   </div>
- );
+  return (
+    <div>
+      {products.map((result) => {
+        return (
+          <div key={result._id}>
+          <div>
+            <h1>{result.name}</h1>
+          </div>
+
+          <div>
+            <p>{result.description}</p>
+          </div>
+          </div>
+        )
+        })}
+    </div>
+    
+  )
 }
 
+export default ProductList

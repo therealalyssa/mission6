@@ -2,12 +2,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 }
 
 .quick-sort-sonja-list {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     margin-bottom: 2rem;;
 
+}
+
+.quick-sort-sonja-items {
+    gap: 4rem;
 }
