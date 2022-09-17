@@ -1,0 +1,13 @@
+.quick-sort-sonja-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quick-sort-sonja-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;;
+
+}
