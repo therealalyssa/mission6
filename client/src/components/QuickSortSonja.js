@@ -1,6 +1,7 @@
 import "./QuickSortSonja.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Footer from "./Footer";
 
 const QuickSortSonja = () => {
 
@@ -61,6 +62,7 @@ const QuickSortSonja = () => {
                 </div>
 
             </div>
+            <Footer></Footer>
         </>
     )
 }
