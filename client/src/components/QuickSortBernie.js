@@ -1,8 +1,7 @@
 // import React from 'react'
 
-// a recursive function
 function QuickSortBernie(array) {
-  if (array.length === 1) {
+  if (array.length <= 1) {
     return array;
   } 
   
@@ -13,13 +12,7 @@ function QuickSortBernie(array) {
     el < pivot ? leftArray.push(el) : rightArray.push(el);
   }
 
-  if (leftArray.length > 0 && rightArray.length > 0) {
-    return [...QuickSortBernie(leftArray), pivot, ...QuickSortBernie(rightArray)]; 
-  } else if (leftArray.length > 0) {
-    return [...QuickSortBernie(leftArray), pivot];
-  } else {
-    return [...QuickSortBernie(rightArray, pivot)];
-  } //could remove these conditions if edge case, array.length is equal or less than 1
+  return [...QuickSortBernie(leftArray), pivot, ...QuickSortBernie(rightArray)]; 
 }
 
 //test array:
