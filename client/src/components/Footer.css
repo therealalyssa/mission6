@@ -1,0 +1,20 @@
+.footer-list-tool-bar {
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    width: 13vw;
+    margin-top: 46vh;;
+}
+
+.footer-list-item {
+    transform: scale(.7);
+}
+
+.footer-list-item-text {
+    transform: scale(.7);
+}
+
+.footer-list-grid {
+    margin-top: 2rem;
+}

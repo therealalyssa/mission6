@@ -1,0 +1,13 @@
+.pick-your-laptop-container {
+   display:flex;
+}
+
+.pick-your-laptop-button {
+    top: 33vh;
+    left: 67vw;
+}
+
+.pick-your-laptop-image {
+    display:flex;
+    width:100vw;
+}
