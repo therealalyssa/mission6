@@ -1,0 +1,23 @@
+[
+    {
+      "_id": 1,
+      "name": "Jacob Jones",
+      "review": "Placed an order at late night, received SMS says the order is ready for pickup at 9:40 AM in the morning the second day! Fantastic shopping experience at PB Tech.",
+      "img": "https://cdn.filestackcontent.com/mMTk1DUsSYG0eXPApqjL",
+      "rating": "5"
+    },
+    {
+      "_id": 2,
+      "name": "Dianne Russell",
+      "review": "Pb Tech is one of the best tech retailers I could ever recommend. Fast shipping and excellent prices. Well done!",
+      "img": "https://cdn.filestackcontent.com/NFGcFfQbSP7iZXljG2Pg",
+      "rating": "3.5"
+      
+    },
+    { "_id": 3,
+      "name": "Tom Wilson",
+      "review": "Purchased some USB cables and a power pack online via PBTech website. Fairly easy to find what was available locally but could be better. Click and collect ready to pick up 1 hour after ordering. Very good.",
+      "img": "https://cdn.filestackcontent.com/eH3taIAXQvqIzJamj9Dj",
+      "rating": "4"
+    }
+  ]

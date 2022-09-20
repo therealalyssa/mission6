@@ -1,0 +1,7 @@
+.customer-review-button {
+    display: flex;
+    border-radius: 8rem;
+    border: none;
+    justify-content: center;
+    cursor: pointer;
+}

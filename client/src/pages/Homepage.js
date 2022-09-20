@@ -6,10 +6,12 @@ import ShopByNeeds from '../components/Homepage/ShopByNeeds.js'
 import ShopByBrands from '../components/Homepage/ShopByBrands.js'
 import CustomerReviews from '../components/Homepage/CustomerReviews.js'
 import PickYourLaptop from '../components/Homepage/PickYourLaptop'
+import FloatingPageNavigationButton from '../components/FloatingPageNavigationButton'
 
 const Homepage = () => {
   return (
     <>
+        <FloatingPageNavigationButton></FloatingPageNavigationButton>
         <HeroImage />
         <LatestReleases />
         <ShopByNeeds />

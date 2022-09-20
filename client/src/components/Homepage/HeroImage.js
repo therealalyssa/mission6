@@ -9,8 +9,8 @@ const HeroImage = () => {
   return (
     <div className='hero-image-container'>
 
-      <div className='hero-image-small-nav'>
-      <Link className='hero-image-small-nav-text' to="/">Home {'>'} </Link>
+      <div spacing={2} className='hero-image-small-nav'>
+      <Link className='hero-image-small-nav-text' to="/">Home</Link>
       <Link className='hero-image-small-nav-text'  to="/">Computer & Tablets {'>'} </Link>
       <Link className='hero-image-small-nav-text'  to="/">Laptops</Link>
       </div>
