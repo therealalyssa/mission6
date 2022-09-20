@@ -28,4 +28,4 @@ console.log(QuickSortBernie(array));
 //   )
 // }
 
-// export default QuickSortBernie
+export default QuickSortBernie
