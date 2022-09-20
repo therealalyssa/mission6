@@ -5,12 +5,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, Rating } from '@mui/material';
 // import CustomerReviews from './CustomerReviews.json';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Box } from '@mui/system';
 import "./CustomerReviewCard.css";
+import NavigateLeftButton from './NavigateLeftButton';
+import NavigateRightButton from './NavigateRightButton';
 
 
 
@@ -43,10 +43,8 @@ const CustomerReviewCard = () => {
     <Box  sx={{ display: 'flex', flexDirection: 'row', justifyContent:'space-evenly', alignItems:'center'}}>
     
     
+    <NavigateLeftButton/>
 
-    <button className='customer-review-button'>
-        <ArrowBackIosIcon sx={{color: 'gray', padding:'0.4rem', fontSize:'medium'}} />
-    </button>
 
     {reviews.slice(0, 3).map((result) => {
         return (
@@ -78,9 +76,7 @@ const CustomerReviewCard = () => {
   </Card>
 
    )})}
-      <button className='customer-review-button'>
-         <ArrowForwardIosIcon sx={{color: 'gray', padding:'0.4rem', fontSize:'medium'}}/>
-      </button>
+   <NavigateRightButton/>
   </Box>
   {/* <Pagination count={2} sx={ { display: 'flex' , justifyContent: 'center'}} ></Pagination> */}
   </>
