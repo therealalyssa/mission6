@@ -1,8 +1,20 @@
+
 import React from 'react'
+import CustomerReviewCard from './CustomerReviewCard'
+
+
+
 
 const CustomerReviews = () => {
+
+
+
   return (
-    <div>CustomerReviews</div>
+    <div>
+
+        <CustomerReviewCard></CustomerReviewCard>
+
+    </div>
   )
 }
 

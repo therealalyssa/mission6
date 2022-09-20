@@ -1,0 +1,59 @@
+
+.rightside {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 30%;
+    top: 7vh;
+    
+}
+.rightside2 {
+    display: flex;
+    position: absolute;
+    right: 2%;
+    top: 2vh;
+    
+}
+.leftside {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 10%;
+    top: 5vh;
+    
+}
+
+.skip-button {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 92%;
+    top: 10vh;
+}
+
+.next-button {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 91%;
+    top: 5vh;
+}
+
+.number-button {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 42%;
+    top: 70vh;
+}
+
+.top-card {
+    display: flex;
+    flex-direction: row;
+    top: 100vh;
+
+}
+
+.infocard:hover {
+border:2px solid #3577A1;
+}
