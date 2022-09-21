@@ -3,6 +3,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import shopData from './shopData.json'
 import { Box, Container } from '@mui/system';
+import { Link } from "react-router-dom";
 
 
 const ShopByNeedsCard = () => {
@@ -36,14 +37,16 @@ const ShopByNeedsCard = () => {
           <Typography variant="body2" sx={{ color:'white', fontFamily:'Montserrat', fontWeight:'700'}}>
             {data.product}
           </Typography>
+          
     </Box>
-
+    <Link to="/ListingPage">
         <CardMedia
           component="img"
           height="350"
           image={data.image}
           alt={data.category}
         />
+        </Link>
     </Box>
     
     </Card>
