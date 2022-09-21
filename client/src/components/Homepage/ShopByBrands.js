@@ -11,27 +11,29 @@ const ShopByBrands = () => {
 
     <Container>
     
-    <Box
+  <Box
     sx={{
       width: '85vw',
       height: '30vh',
       display:'flex', flexDirection:'row', justifyContent:'space-evenly', flexWrap:'wrap',
       padding: '1rem',
-    
   }}
     >
       {shopByBrandsData.map((logos) => {
         return (
-  <Box key={logos.brand}>
-   <Card key={logos.brand} sx={{ width: 230, height: 50, margin: 4, display:'flex', justifyContent:'center', cursor:'pointer'}}>
-    <img src={logos.img} alt={logos.brand}></img>
-   </Card>
-   </Box>
-
-    
-    )})}
+      <Box key={logos.brand}>
+        <Card key={logos.brand} sx={{ width: 230, height: 50, margin: 4, display:'flex', justifyContent:'center', cursor:'pointer'}}>
+          <img src={logos.img} alt={logos.brand}></img>
+        </Card>
+      </Box>
+       )})}
     </Box>
+
     </Container>
+
+    <Typography variant="h6"  fontSize='1.5rem' sx={{marginLeft:'8.3rem', marginBottom:'4rem', marginTop:'4rem'}}>
+    Our Fulfilment Options
+    </Typography>
     </>
   )
 }

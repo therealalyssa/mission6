@@ -40,7 +40,7 @@ const CustomerReviewCard = () => {
     </Typography>
     
 
-    <Box  sx={{ display: 'flex', flexDirection: 'row', justifyContent:'space-evenly', alignItems:'center'}}>
+    <Box  sx={{ display: 'flex', flexDirection: 'row', justifyContent:'space-evenly', alignItems:'center', marginBottom:'2rem'}}>
     
 
     <NavigateLeftButton/>
