@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "category": "Business",
+    "company": "PB Tech",
+    "product": "laptops",
+    "image": "https://cdn.filestackcontent.com/1yKGxKzbSeWqAR03GMzz"
+  },
+  {
+    "id": 2,
+    "category": "Personal",
+    "company": "PB Tech",
+    "product": "laptops",
+    "image":"https://cdn.filestackcontent.com/d2V3yT1OQlCrCFcXfiz5"
+  },
+  {
+    "id": 3,
+    "category": "Gaming",
+    "company": "PB Tech",
+    "product": "laptops",
+    "image":"https://cdn.filestackcontent.com/o44vK51RqC8WVim1njTA"
+  },
+  {
+    "id": 4,
+    "category": "High Performance",
+    "company": "PB Tech",
+    "product": "laptops",
+    "image":"https://cdn.filestackcontent.com/piVs5czQOWrtnLuFKW8p"
+  },
+  {
+    "id": 5,
+    "category": "Light Weight",
+    "company": "PB Tech",
+    "product": "laptops",
+    "image":"https://cdn.filestackcontent.com/dIybnfmSIKRCYarkuibS"
+  },
+  {
+    "id": 6,
+    "category": "2 In 1 Flip",
+    "company": "PB Tech",
+    "product": "laptops",
+    "image":"https://cdn.filestackcontent.com/uCFrEmRdTkqtXK50xsNF"
+  }
+]

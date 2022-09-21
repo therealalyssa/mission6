@@ -51,7 +51,7 @@ export default function Quiz() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Let's go!</Button>
+      <Button  style={{ color:'white', backgroundColor: "#3577A1", width: "12vw" }} variant="contained" onClick={handleOpen}>Let's go!</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -63,7 +63,7 @@ export default function Quiz() {
             <CloseIcon
               onClick={handleClose}
               color="primary"
-              justifyContent="end"
+             sx= {{justifyContent:"end"}}
             ></CloseIcon>
           </Typography>
 

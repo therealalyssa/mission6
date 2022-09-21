@@ -1,8 +1,8 @@
 import React from 'react'
 import "./HeroImage.css";
 import heroBackground from "../img/background.png";
-import { Button } from '@mui/material';
 import { Link } from "react-router-dom";
+import Quiz from "../Quiz";
 
 
 const HeroImage = () => {
@@ -18,7 +18,8 @@ const HeroImage = () => {
       <div className='hero-image-content'>
       <h1 className='hero-image-text'>Which Laptop is Right For You?</h1>
       <p>Take an easy quiz and find out in three quick steps!</p>
-      <Button style={{ backgroundColor: "#3577A1", width: "12vw" }} variant="contained">Let's go!</Button>
+      <Quiz></Quiz>
+      
       </div>
 
       <div>
