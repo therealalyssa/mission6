@@ -65,9 +65,11 @@ function Navbar() {
       }));
     
     return (
-        <div clasName="navbar">
-            <div className="navbar-container">
-                <Box sx={{flexGrow: 1, marginBottom: 3}}>
+
+        <div className="navbar">
+            {/* <div className="navbar-container"> */}
+                <Box sx={{flexGrow: 1, marginBottom: 0}}>
+
                     <AppBar 
                     position='static'
                     style={{ backgroundColor: "#214f74", height: "136px" }}

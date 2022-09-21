@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 
 function Header() {
     return (
-        <div clasName="header">
+        <div className="header">
             <Topbar />
             <Navbar />
         </div>

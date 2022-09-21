@@ -7,10 +7,12 @@ import ShopByBrands from '../components/Homepage/ShopByBrands.js'
 import CustomerReviews from '../components/Homepage/CustomerReviews.js'
 import PickYourLaptop from '../components/Homepage/PickYourLaptop'
 import FloatingPageNavigationButton from '../components/FloatingPageNavigationButton'
+import Header from '../components/Header/Header'
 
 const Homepage = () => {
   return (
     <>
+        <Header></Header>
         <FloatingPageNavigationButton></FloatingPageNavigationButton>
         <HeroImage />
         <LatestReleases />

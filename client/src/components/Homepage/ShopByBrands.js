@@ -1,4 +1,4 @@
-import { Box, Card, Container, Typography } from '@mui/material'
+import { Box, Card, Typography } from '@mui/material'
 import shopByBrandsData from "./shopByBrandsData.json";
 
 
@@ -9,13 +9,14 @@ const ShopByBrands = () => {
     Shop by Brands
     </Typography>
 
-    <Container>
+
     
   <Box
     sx={{
-      width: '85vw',
+      width: '75vw',
       height: '30vh',
-      display:'flex', flexDirection:'row', justifyContent:'space-evenly', flexWrap:'wrap',
+      marginLeft: '5rem',
+      display:'flex', flexDirection:'row', justifyContent:'flex-end', flexWrap:'wrap',
       padding: '1rem',
   }}
     >
@@ -29,7 +30,7 @@ const ShopByBrands = () => {
        )})}
     </Box>
 
-    </Container>
+
 
     <Typography variant="h6"  fontSize='1.5rem' sx={{marginLeft:'8.3rem', marginBottom:'4rem', marginTop:'4rem'}}>
     Our Fulfilment Options

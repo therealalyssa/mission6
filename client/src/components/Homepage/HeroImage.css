@@ -1,8 +1,6 @@
 
 .hero-image-container {
     display: flex;
-    justify-content: flex-end;
-    flex-direction: column;  
 }
 
 .hero-image-content {
@@ -10,7 +8,7 @@
     flex-direction: column;
     position: absolute;
     left: 11%;
-    top: 13vh;
+    top: 35vh;
     color: white;
 }
 
@@ -28,7 +26,7 @@
 .hero-image-small-nav {
     position: absolute;
     left: 2%;
-    top: 3vh;
+    top: 24vh;
 }
 
 .hero-image-small-nav-text {
