@@ -10,11 +10,9 @@ const CustomerReviews = () => {
 
 
   return (
-    <div>
-
+    <>
         <CustomerReviewCard></CustomerReviewCard>
-
-    </div>
+    </>
   )
 }
 
