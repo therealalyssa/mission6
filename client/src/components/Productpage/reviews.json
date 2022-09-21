@@ -1,0 +1,21 @@
+[
+    {
+      "_id": 1,
+      
+      "rating": "4",
+      "review": "HP Z book is a valuable product for my daughter's education and my office work , I highly appreciated PB tech customer service and pricing.",
+      "img": "https://cdn.filestackcontent.com/mMTk1DUsSYG0eXPApqjL",
+      "name": "Theresa Webb"
+      
+    },
+    {
+        "_id": 2,
+        
+        "rating": "4",
+        "review": "Placed an order at late night, received SMS says the order is ready for pickup at 9:40 AM in the morning the second day! Fantastic shopping experience at PB Tech.",
+        "img": "https://cdn.filestackcontent.com/NFGcFfQbSP7iZXljG2Pg",
+        "name": "Devon Lane"
+        
+      }
+
+  ]
