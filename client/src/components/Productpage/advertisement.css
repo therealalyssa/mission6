@@ -1,0 +1,8 @@
+.main1 {
+    flex-direction: column;
+}
+
+.quizbtn {
+    position: 'fixed';
+    top: '-15px'
+}

@@ -1,36 +1,50 @@
-// import React, { useEffect, useState } from 'react';
-// import './App.css';
-// // import ProductCard from './ProductCard';
-// // import axios from "axios";
-// import { Grid } from '@mui/material';
-// import { Container } from '@mui/system';
+import React from 'react'
+import './ProductGrid.css'
+import ProductCard from './ProductCard'
+import { 
+    Grid, 
+    // makeStyles 
+    } from '@mui/material'
 
+// const useStyles = makeStyles({
+//     gridContainer: {
+//         paddingLeft: '526px',
+//         paddingRight: '49px'
+//     }
+// })
 
-// export default function ProductGrid() {
+export default function ProductGrid() {
+    
+    // const classes = useStyles()
+    
+    return (
+        <Grid container spacing={4} 
+            // className={classes.gridContainer}
+        >
 
-//   const [card, setCard] =useState([])
+            <Grid item lg={3}>
+                <ProductCard />
+            </Grid>
 
-//   useEffect(() => {
-//     axios
-//       .get(`http://localhost:5001/product`)
-//       .then((response) => {
-//           setProduct(response.data);
-//         console.log(response.data);
-//       })
-//       .catch((error) => {
-//         console.log(error);
-//       });
-//   }, []);
- 
-//   return (
-//     <Container>
-//       <Grid container>
-//         {/* {product.map(product => (
-//           <Grid item key={product.id} xs={12} md={6} lg={4}> */}
-//             <ProductCard />
-//           </Grid>
-//         ))}
-//       </Grid>
-//     </Container>
-//   )
-// }
+            <Grid item lg={3}>
+                <ProductCard />
+            </Grid>
+
+            <Grid item lg={3}>
+                <ProductCard />
+            </Grid>  
+
+            <Grid item lg={3}>
+                <ProductCard />
+            </Grid>  
+
+            <Grid item lg={3}>
+                <ProductCard />
+            </Grid>  
+
+            <Grid item lg={3}>
+                <ProductCard />
+            </Grid>  
+        </Grid>      
+    )
+}
