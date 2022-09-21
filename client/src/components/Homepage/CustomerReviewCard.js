@@ -4,27 +4,26 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, Rating } from '@mui/material';
-// import CustomerReviews from './CustomerReviews.json';
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Box } from '@mui/system';
 import "./CustomerReviewCard.css";
 import NavigateLeftButton from './NavigateLeftButton';
 import NavigateRightButton from './NavigateRightButton';
+import "react-multi-carousel/lib/styles.css";
 
 
 
 const CustomerReviewCard = () => {
 
     const [reviews, setReviews] = useState([]);
-    // const [showMore, setShowMore] = useState(false);
 
     useEffect(() => {
       axios
         .get(`http://localhost:5001/reviews`)
         .then((response) => {
             setReviews(response.data);
-          console.log(response.data);
+          // console.log(response.data);
         })
         .catch((error) => {
           console.log(error);
@@ -36,13 +35,14 @@ const CustomerReviewCard = () => {
   return (
     <>
 
-    <Typography variant="h6"  fontSize='1.5rem' sx={{marginLeft:'8.3rem', marginBottom:'3rem'}}>
+    <Typography variant="h6"  fontSize='1.5rem' sx={{marginLeft:'8.3rem', marginBottom:'2rem'}}>
     Read What Our Customers Have To Say
     </Typography>
     
-    <Box  sx={{ display: 'flex', flexDirection: 'row', justifyContent:'space-evenly', alignItems:'center'}}>
+
+    <Box  sx={{ display: 'flex', flexDirection: 'row', justifyContent:'space-evenly', alignItems:'center', marginBottom:'2rem'}}>
     
-    
+
     <NavigateLeftButton/>
 
 
