@@ -4,6 +4,11 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import HPProbookLaptop1 from "../img/HPProbookLaptop1.png";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
+// const useStyles = makeStyles({
+//   root: {
+//     minWidth: 200
+//   }
+// })
 
 const card = [ //add product array
   { 
