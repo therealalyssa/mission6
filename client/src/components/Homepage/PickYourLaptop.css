@@ -3,8 +3,9 @@
 }
 
 .pick-your-laptop-button {
-    top: 33vh;
-    left: 67vw;
+    position: absolute;
+    bottom: -225vh;
+    left: 63vw;
 }
 
 .pick-your-laptop-image {

@@ -1,13 +1,25 @@
 import * as React from 'react';
-import { AppBar, Button, InputBase, styled, Toolbar, Typography } from '@mui/material';
+import { 
+    AppBar,
+    Button,
+    InputBase, 
+    // MenuIcon,
+    styled, 
+    // StyledIconButton,
+    // TextField,
+    Toolbar, 
+    Typography 
+    } from '@mui/material';
 import { Box } from '@mui/system';
 // import { useState } from 'react';
-import logo from './logo.png';
+import logo from '../img/logo.png';
 import SearchIcon from '@mui/icons-material/Search';
 import PersonIcon from '@mui/icons-material/Person';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-// import MenuIcon from '@mui/icons-material/Menu';
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import MenuIcon from '@mui/icons-material/Menu';
+// import { ClassNames } from '@emotion/react';
 
 // const pages = ['Card', 'Carousel', 'Table'];
 
@@ -48,71 +60,121 @@ function Navbar() {
           transition: theme.transitions.create('width'),
           width: '100%',
           [theme.breakpoints.up('md')]: {
-            width: '20ch',
           },
         },
       }));
     
     return (
         <div clasName="navbar">
-            {/* <div className="navbar-container"> */}
+            <div className="navbar-container">
                 <Box sx={{flexGrow: 1, marginBottom: 3}}>
                     <AppBar 
                     position='static'
                     style={{ backgroundColor: "#214f74", height: "136px" }}
                     >
                         <Toolbar className="navbar-row1">
-                            <Typography
-                                noWrap
-                                component="div"
-                                sx={{mr: 2, display: 'none', md: 'flex'}}
-                            >
-                                <img src={logo} style={{width: 152, height: 29 }} alt='logo'/>
-                            </Typography>
-                            <Search 
-                                style={{ width:"923px", height: "37px", backgroundColor: "white"}}
-                            >
-                                <StyledInputBase
-                                    placeholder="Search by keywords or part #"
-                                    inputProps={{ 'aria-label': 'search' }}
-                                />
-                            </Search>
-                            <StyledButton variant='contained' size='medium' style={{ backgroundColor: "#E2873C"}}>
-                                <SearchIcon/>
-                            </StyledButton>
-                            <StyledButton variant='contained' size='medium' startIcon={<PersonIcon/>}>
-                                Sign In or Create Account
-                            </StyledButton>
-                            <StyledButton variant='contained' size='medium' startIcon={<FavoriteIcon/>}>
-                                Wish List
-                            </StyledButton>
-                            <StyledButton variant='contained' size='medium'>
-                                <ShoppingCartIcon/>
-                            </StyledButton>
+                            <div 
+                            style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "flex-start"
+                            }}
                             
-                            {/* <div className="navbar-row2">
-                            <StyledIconButton size='large'>
-                                <MenuIcon/>
-                            </StyledIconButton>
-                            Departments
-                            Brands
-                            Services
-                            Promotions
-                            Clearance
-                            New Arrivals
-                            Tax Free Shipping
-                            BYOD
-                            Returns & Warranty
-                            Careers
-                            Help and support
-                            Stores
-                            </div> */}
+                            className="navbar-row1-left">
+                                <Typography
+                                    noWrap
+                                    component="div"
+                                    sx={{mr: 2, display: 'none', md: 'flex'}}
+                                >
+                                    <img 
+                                        component="img"
+                                        height="29px"
+                                        width="152px"
+                                        src={logo}
+                                        alt="logo"
+                                    />
+                                </Typography>
+                                
+                                {/* <div className={classes.searchContainer}>
+                                    <TextField className={classes.searchInput} />
+                                </div> */}
 
+                                <Search 
+                                    style={{ width:"923px", height: "37px", backgroundColor: "white", float: "left"}}
+                                >
+                                    <StyledInputBase
+                                        style={{width: "923px"}}
+                                        placeholder="Search by keywords or part #"
+                                        inputProps={{ 'aria-label': 'search' }}
+                                    />
+                                </Search>
+                            </div>
+
+                            <div 
+                            style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "flex-end"
+                            }}
+                            
+                            className="navbar-row1-right">
+
+                                <StyledButton variant='contained' size='medium' style={{ backgroundColor: "#E2873C"}}>
+                                    <SearchIcon/>
+                                </StyledButton>
+                                <StyledButton variant='contained' size='medium' startIcon={<PersonIcon/>}>
+                                    Sign In or Create Account
+                                </StyledButton>
+                                <StyledButton variant='contained' size='medium' startIcon={<FavoriteIcon/>}>
+                                    Wish List
+                                </StyledButton>
+                                <StyledButton variant='contained' size='medium'>
+                                    <ShoppingCartIcon/>
+                                </StyledButton>
+                            </div>
+                        </Toolbar>
+                        <Toolbar>
+                            <div 
+                                className="navbar-row2"
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    justifyContent: "space-evenly",
+                            }}
+                            >
+                                <div 
+                                    className="navbar-row2-left"
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "flex-start",
+                                        fontSize:"20px", 
+                                        fontWeight:"600"
+                                    }}
+                                >
+                                    <MenuIcon />
+                                    Departments
+                                </div>
+                                <div>
+                                    Brands
+                                    Services
+                                    Promotions
+                                    Clearance
+                                    New Arrivals
+                                    Tax Free Shipping
+                                    BYOD
+                                    Returns & Warranty
+                                    Careers
+                                    Help and support
+                                </div>
+                                <div>
+                                    <StorefrontIcon />
+                                    Stores
+                                </div>
+                            </div>
                         </Toolbar>
                     </AppBar>
                 </Box>
-            {/* </div> */}
-
+            </div>
         </div>
     )
 }
