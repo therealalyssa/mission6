@@ -1,0 +1,11 @@
+.page-nav {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4D99C6;
+}
+
+.product-grid-container {
+    display: flex;
+    margin-left: 526px;
+}

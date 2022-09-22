@@ -28,74 +28,55 @@ const CustomerReviewCard = () => {
   }, []);
 
   return (
-    <>
-      <Typography
-        variant="h6"
-        fontSize="1.5rem"
-        sx={{ marginLeft: "8.3rem", marginBottom: "2rem" }}
-      >
-        Read What Our Customers Have To Say
-      </Typography>
+<>
 
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-evenly",
-          alignItems: "center",
-          marginBottom: "2rem",
-        }}
-      >
-        <NavigateLeftButton />
+    <Typography variant="h6"  fontSize='1.5rem' sx={{marginLeft:'8.3rem', marginBottom:'2rem'}}>
+    Read What Our Customers Have To Say
+    </Typography>
+    
 
-        {reviews.slice(0, 3).map((result) => {
-          return (
-            <Card
-              key={result._id}
-              sx={{ maxWidth: 380, height: 150, margin: 2 }}
-            >
-              <CardActionArea
-                sx={{ display: "flex", flexDirection: "row", height: 150 }}
-              >
-                <CardMedia
-                  component="img"
-                  height="100%"
-                  src={result.img}
-                  alt={result.name}
-                />
-                <CardContent>
-                  <Rating
-                    name="size-medium"
-                    value={Number(result.rating["$numberDecimal"])}
-                    precision={0.5}
-                    readOnly
-                  ></Rating>
-                  <br />
-                  <Typography
-                    variant="body3"
-                    fontSize="0.8rem"
-                    color="text.secondary"
-                  >
-                    {result.review}
-                  </Typography>
-                  <Typography
-                    gutterBottom
-                    variant="h6"
-                    component="div"
-                    fontSize="1.1rem"
-                  >
-                    {result.name}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          );
-        })}
-        <NavigateRightButton />
-      </Box>
-      {/* <Pagination count={2} sx={ { display: 'flex' , justifyContent: 'center'}} ></Pagination> */}
-    </>
-  );
-};
+    <Box  sx={{ display: 'flex', flexDirection: 'row', justifyContent:'space-evenly', alignItems:'center', marginBottom:'2rem'}}>
+    
 
-export default CustomerReviewCard;
+    <NavigateLeftButton/>
+
+
+    {reviews.slice(0, 3).map((result) => {
+        return (
+    
+    <Card key={result._id} sx={{ maxWidth: 380, height: 150, margin: 2}}>
+    
+    <CardActionArea sx={{ display: 'flex', flexDirection: 'row', height: 150}}>
+      <CardMedia
+        component="img"
+        height="100%"
+        src={result.img}
+        alt={result.name}
+      />
+      <CardContent>
+
+      <Rating name="size-medium" value={Number(result.rating['$numberDecimal'])} precision={0.5} readOnly ></Rating>
+      <br/>
+        <Typography variant="body3" fontSize='0.8rem' color="text.secondary">
+        {result.review}
+        </Typography>
+        <Typography gutterBottom variant="h6" component="div" fontSize='1.1rem'>
+        {result.name}
+        </Typography>
+    
+      </CardContent>
+      
+    </CardActionArea>
+
+  </Card>
+
+   )})}
+   <NavigateRightButton/>
+  </Box>
+  {/* <Pagination count={2} sx={ { display: 'flex' , justifyContent: 'center'}} ></Pagination> */}
+  </>
+);
+}
+
+export default CustomerReviewCard
+

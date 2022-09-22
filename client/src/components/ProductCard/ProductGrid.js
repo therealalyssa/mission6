@@ -18,10 +18,24 @@ export default function ProductGrid() {
     // const classes = useStyles()
     
     return (
-        <Grid container spacing={4} 
+        <Grid 
+            container spacing={4} 
+            justifyContent="center"
+            alignItems="center"
+            paddingTop="254px"
+            paddingLeft="526px"
+            paddingRight="19px"
             // className={classes.gridContainer}
         >
-
+            <Grid item lg={3}>
+                <ProductCard />
+            </Grid>
+            <Grid item lg={3}>
+                <ProductCard />
+            </Grid>
+            <Grid item lg={3}>
+                <ProductCard />
+            </Grid>
             <Grid item lg={3}>
                 <ProductCard />
             </Grid>
@@ -29,22 +43,29 @@ export default function ProductGrid() {
             <Grid item lg={3}>
                 <ProductCard />
             </Grid>
+            <Grid item lg={3}>
+                <ProductCard />
+            </Grid>
+            <Grid item lg={3}>
+                <ProductCard />
+            </Grid>
+            <Grid item lg={3}>
+                <ProductCard />
+            </Grid>
 
             <Grid item lg={3}>
                 <ProductCard />
-            </Grid>  
-
+            </Grid>
             <Grid item lg={3}>
                 <ProductCard />
-            </Grid>  
-
+            </Grid>
             <Grid item lg={3}>
                 <ProductCard />
-            </Grid>  
-
+            </Grid>
             <Grid item lg={3}>
                 <ProductCard />
-            </Grid>  
+            </Grid>
+               
         </Grid>      
     )
 }

@@ -12,20 +12,23 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 // import { useState } from 'react';
-import logo from "../img/logo.png";
-import SearchIcon from "@mui/icons-material/Search";
-import PersonIcon from "@mui/icons-material/Person";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import StorefrontIcon from "@mui/icons-material/Storefront";
-import MenuIcon from "@mui/icons-material/Menu";
+import logo from './logo.png';
+import SearchIcon from '@mui/icons-material/Search';
+import PersonIcon from '@mui/icons-material/Person';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import MenuIcon from '@mui/icons-material/Menu';
 // import { ClassNames } from '@emotion/react';
 
-// const pages = ['Card', 'Carousel', 'Table'];
-
+  
 const StyledButton = styled(Button)({
-  backgroundColor: "#1e4261",
-});
+    backgroundColor: '#1e4261',
+    height: "37px",
+    fontSize: "16px",
+    textTransform: "lowercase",
+    flexWrap: "nowrap"
+})
 
 // const StyledIconButton = styled(IconButton)({
 //     backgroundColor: '#1e4261'
@@ -39,113 +42,200 @@ function Navbar() {
     borderRadius: theme.shape.borderRadius,
   }));
 
-  //   const SearchIconWrapper = styled('div')(({ theme }) => ({
-  //     padding: theme.spacing(0, 2),
-  //     height: '100%',
-  //     position: 'absolute',
-  //     pointerEvents: 'none',
-  //     display: 'flex',
-  //     alignItems: 'center',
-  //     justifyContent: 'center',
-  //   }));
+    const Search = styled('div')(({ theme }) => ({
+        position: 'relative',
+        backgroundColor: "white",
+        color: "#A6A6A6",
+        borderRadius: theme.shape.borderRadius,
+      }));
+      
+      const StyledInputBase = styled(InputBase)(({ theme }) => ({
+        color: 'inherit',
+        '& .MuiInputBase-input': {
+        //   padding: theme.spacing(1, 1, 1, 0),
+          // vertical padding + font size from searchIcon
+          paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+          transition: theme.transitions.create('width'),
+          width: '100%',
+          [theme.breakpoints.up('md')]: {
+          },
+        },
+      }));
+    
+    return (
+        <div clasName="navbar">
 
-  const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: "inherit",
-    "& .MuiInputBase-input": {
-      padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
-      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create("width"),
-      width: "100%",
-      [theme.breakpoints.up("md")]: {},
-    },
-  }));
-
-  return (
-    <div className="navbar">
-      {/* <div className="navbar-container"> */}
-      <Box sx={{ flexGrow: 1, marginBottom: 0 }}>
-        <AppBar
-          position="static"
-          style={{ backgroundColor: "#214f74", height: "136px" }}
-        >
-          <Toolbar className="navbar-row1">
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "flex-start",
-              }}
-              className="navbar-row1-left"
-            >
-              <Typography
-                noWrap
-                component="div"
-                sx={{ mr: 2, display: "none", md: "flex" }}
+          <div className="navbar-container">
+            <Box sx={{flexGrow: "1", marginBottom: "3"}}>
+              <AppBar 
+                position='static'
+                style={{ backgroundColor: "#214f74", width: "100%", height: "136px" }}
               >
-                <img
-                  component="img"
-                  height="29px"
-                  width="152px"
-                  src={logo}
-                  alt="logo"
-                />
-              </Typography>
-
-              {/* <div className={classes.searchContainer}>
+                <Toolbar className="navbar-row1">
+                  
+                  <div 
+                            style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "flex-start",
+                                // paddingTop: "16px"
+                                width: "100%"
+                            }}
+                            
+                            className="navbar-row1-left">
+                                <Typography
+                                    noWrap
+                                    component="div"
+                                    sx={{mr: 2, display: 'none', md: 'flex'}}
+                                >
+                      <img 
+                                        component="img"
+                                        height="29px"
+                                        width="152px"
+                                        src={logo}
+                                        alt="logo"
+                      />
+                      </Typography>
+                                
+                                {/* <div className={classes.searchContainer}>
                                     <TextField className={classes.searchInput} />
                                 </div> */}
 
-              <Search
-                style={{
-                  width: "923px",
-                  height: "37px",
-                  backgroundColor: "white",
-                  float: "left",
-                }}
-              >
-                <StyledInputBase
-                  style={{ width: "923px" }}
-                  placeholder="Search by keywords or part #"
-                  inputProps={{ "aria-label": "search" }}
-                />
-              </Search>
-            </div>
+                        <Search 
+                                    style={{ width:"923px", height: "37px", backgroundColor: "white", float: "left"}}
+                        >
+                          <StyledInputBase
+                                        style={{width: "923px"}}
+                                        placeholder="Search by keywords or part #"
+                                        inputProps={{ 'aria-label': 'search' }}
+                          />
+                        </Search>
+                  </div>
 
-            <div
+                  <div 
+                                className="navbar-row1-right"
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    justifyContent: "flex-end"
+                                }}
+                  >
+
+                  <StyledButton variant='contained' size='small' 
+                                    style={{ 
+                                        backgroundColor: "#E2873C"
+                                    }}
+                  >
+                    <SearchIcon/>
+                  </StyledButton>
+
+                  <StyledButton variant='contained' size='xs' startIcon={<PersonIcon/>}>
+                                    Sign In or Create Account
+                  </StyledButton>
+                                
+                  <StyledButton variant='contained' size='xs' startIcon={<FavoriteIcon/>}>
+                                    Wish List
+                  </StyledButton>
+                                
+                  <StyledButton variant='contained' size='xs'>
+                    <ShoppingCartIcon/>
+                  </StyledButton>
+
+                  </div>
+                </Toolbar>
+
+                <Toolbar>
+                  <div 
+                                className="navbar-row2"
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    justifyContent: "space-evenly",
+                                    width: "100%"
+                            }}
+                  >
+                  
+                  <div 
+                                    className="navbar-row2-left"
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "flex-start",
+                                        fontSize:"20px", 
+                                        fontWeight:"600"
+                                    }}
+                  >
+                    <MenuIcon />
+                                    Departments
+                  </div>
+                                
+                  <div
+                                    style={{
+                                        display: "flex",
+                                        flexDirection: "row",
+                                        justifyContent: "space-evenly",
+                                    }}
+                  >
+                                    Brands
+                                    Services
+                                    Promotions
+                                    Clearance
+                                    New Arrivals
+                                    Tax Free Shipping
+                                    BYOD
+                                    Returns & Warranty
+                                    Careers
+                                    Help and support
+                    </div>
+                    
+                    <div>
+                      <StorefrontIcon />
+                                    Stores
+                    </div>
+
+                  </div>
+                </Toolbar>
+              </AppBar>
+            </Box>
+          </div>
+
+          <div
               style={{
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "flex-end",
               }}
               className="navbar-row1-right"
-            >
-              <StyledButton
+          >
+            <StyledButton
                 variant="contained"
                 size="medium"
                 style={{ backgroundColor: "#E2873C" }}
-              >
-                <SearchIcon />
-              </StyledButton>
-              <StyledButton
+            >
+              <SearchIcon />
+            </StyledButton>
+              
+            <StyledButton
                 variant="contained"
                 size="medium"
                 startIcon={<PersonIcon />}
-              >
+            >
                 Sign In or Create Account
-              </StyledButton>
-              <StyledButton
+            </StyledButton>
+              
+            <StyledButton
                 variant="contained"
                 size="medium"
                 startIcon={<FavoriteIcon />}
-              >
+            >
                 Wish List
-              </StyledButton>
-              <StyledButton variant="contained" size="medium">
-                <ShoppingCartIcon />
-              </StyledButton>
-            </div>
-          </Toolbar>
+            </StyledButton>
+              
+            <StyledButton variant="contained" size="medium">
+              <ShoppingCartIcon />
+            </StyledButton>
+          
+          </div>
+
           <Toolbar>
             <div
               className="navbar-row2"
@@ -171,15 +261,17 @@ function Navbar() {
                 Brands Services Promotions Clearance New Arrivals Tax Free
                 Shipping BYOD Returns & Warranty Careers Help and support
               </div>
+              
               <div>
                 <StorefrontIcon />
                 Stores
               </div>
+
             </div>
+
           </Toolbar>
-        </AppBar>
-      </Box>
-    </div>
+
+      </div>
   );
 }
 
