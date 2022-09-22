@@ -8,7 +8,7 @@ import {
   // StyledIconButton,
   // TextField,
   Toolbar,
-  Typography,
+  Typography
 } from "@mui/material";
 import { Box } from "@mui/system";
 // import { useState } from 'react';
@@ -54,9 +54,10 @@ function Navbar() {
   }));
 
   return (
-    <div clasName="navbar">
+    <div className="navbar">
+      
       <div className="navbar-container">
-        <Box sx={{ flexGrow: "1", marginBottom: "3" }}>
+        <Box>
           <AppBar
             position="static"
             style={{
@@ -89,10 +90,6 @@ function Navbar() {
                     alt="logo"
                   />
                 </Typography>
-
-                {/* <div className={classes.searchContainer}>
-                                    <TextField className={classes.searchInput} />
-                                </div> */}
 
                 <Search
                   style={{
@@ -194,75 +191,6 @@ function Navbar() {
         </Box>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "flex-end",
-        }}
-        className="navbar-row1-right"
-      >
-        <StyledButton
-          variant="contained"
-          size="medium"
-          style={{ backgroundColor: "#E2873C" }}
-        >
-          <SearchIcon />
-        </StyledButton>
-
-        <StyledButton
-          variant="contained"
-          size="medium"
-          startIcon={<PersonIcon />}
-        >
-          Sign In or Create Account
-        </StyledButton>
-
-        <StyledButton
-          variant="contained"
-          size="medium"
-          startIcon={<FavoriteIcon />}
-        >
-          Wish List
-        </StyledButton>
-
-        <StyledButton variant="contained" size="medium">
-          <ShoppingCartIcon />
-        </StyledButton>
-      </div>
-
-      <Toolbar>
-        <div
-          className="navbar-row2"
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-evenly",
-          }}
-        >
-          <div
-            className="navbar-row2-left"
-            style={{
-              display: "flex",
-              justifyContent: "flex-start",
-              fontSize: "20px",
-              fontWeight: "600",
-            }}
-          >
-            <MenuIcon />
-            Departments
-          </div>
-          <div>
-            Brands Services Promotions Clearance New Arrivals Tax Free Shipping
-            BYOD Returns & Warranty Careers Help and support
-          </div>
-
-          <div>
-            <StorefrontIcon />
-            Stores
-          </div>
-        </div>
-      </Toolbar>
     </div>
   );
 }
