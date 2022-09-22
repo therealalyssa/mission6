@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 import { Box } from "@mui/system";
 import "./ReviewCard.css";
 import NavigateLeftButton from "./../Homepage/NavigateLeftButton";
-import NavigateRightButton from "./../Homepage/NavigateLeftButton";
+import NavigateRightButton from "./../Homepage/NavigateRightButton";
 
 const ProductCard = () => {
   const [reviews, setReviews] = useState([]);
@@ -52,10 +52,10 @@ const ProductCard = () => {
           return (
             <Card
               key={result._id}
-              sx={{ maxWidth: 380, height: 150, margin: 2 }}
+              sx={{ maxWidth: 250, height: 180, margin: 2 }}
             >
               <CardActionArea
-                sx={{ display: "flex", flexDirection: "row", height: 150 }}
+                sx={{ display: "flex", flexDirection: "column", height: 140 }}
               >
                 <CardMedia
                   component="img"

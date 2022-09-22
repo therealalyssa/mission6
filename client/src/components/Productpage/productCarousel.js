@@ -99,7 +99,7 @@ const ProductCarousel = () => {
         <Box className="rightsidetext4">
           <Box fontSize="1.6rem" fontWeight="bold" color="black">
             {" "}
-            Quantity button:
+            Quantity:
           </Box>
         </Box>
         {/* <Box className="quantitybtn" sx={{ marginLeft: "20 rem" }}>
@@ -182,7 +182,7 @@ const ProductCarousel = () => {
 
       <Box
         className="quantitybtn"
-        sx={{ position: "absolute", marginTop: "20 rem" }}
+        sx={{ position: "absolute", paddingLeft: "59%", paddingTop: "18%" }}
       >
         <FormControl>
           <InputLabel id="demo-simple-select-label"></InputLabel>
