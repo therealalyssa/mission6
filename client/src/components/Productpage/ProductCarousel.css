@@ -2,14 +2,13 @@
     position: relative;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   }
   
   .image {
-    width: 1000px;
-    height: 600px;
-    border-radius: 10px;
+    width: 600px;
+    height: 400px;
   }
   
   .right-arrow {
@@ -17,10 +16,12 @@
     top: 50%;
     right: 32px;
     font-size: 3rem;
-    color: #000;
+    color: rgb(170, 162, 162);
     z-index: 10;
     cursor: pointer;
     user-select: none;
+    color: "#111827";
+    background-color: "#F3F4F6";
   }
   
   .left-arrow {
@@ -36,11 +37,89 @@
   
   .slide {
     opacity: 0;
-    transition-duration: 1s ease;
+    transition-duration: 3s linear ;
   }
   
   .slide.active {
     opacity: 1;
     transition-duration: 1s;
-    transform: scale(1.08);
+    transform: scale(0.8);
   }
+
+  .hero-image-small-nav2 {
+    position: absolute;
+    left: 3%;
+    top: 30vh;
+    color: #3577A1;
+}
+
+.hero-image-small-nav-text2 {
+    color: #3577A1;
+    text-decoration: none;
+    font-size: small;
+}
+
+.rightsidetext {
+  position: absolute;
+  display:flex;
+  padding-left: 50%;;
+  padding-top:10%;
+}
+
+.rightsidetext2 {
+  position: absolute;
+  display:flex;
+  padding-left: 50%;;
+  padding-top:12%;
+}
+.rightsidetext3 {
+  position: absolute;
+  display:flex;
+  padding-left: 50%;;
+  padding-top:15%;
+}
+.rightsidetext4 {
+  position: absolute;
+  display:flex;
+  padding-left: 50%;;
+  padding-top:19%;
+}
+.rightsidetext5 {
+  position: absolute;
+  display:flex;
+  padding-left: 50%;;
+  padding-top:25%;
+}
+.rightsidetext6 {
+  position: absolute;
+  display:flex;
+  padding-left: 50%;;
+  padding-top:30%;
+}
+.rightsidetext7 {
+  position: absolute;
+  display:flex;
+  padding-left: 50%;;
+  padding-top:32%;
+}
+.rightsidetext8 {
+  position: absolute;
+  display:flex;
+  padding-left: 50%;;
+  padding-top:34%;
+}
+.rightsidetext9 {
+  position: absolute;
+  display:flex;
+  padding-left: 50%;;
+  padding-top:36%;
+}
+
+/* .quantitybtn {
+  position: absolute;
+  display:flex;
+} */
+
+ul {
+  list-style-image: url('./../img/Vector.png');
+}

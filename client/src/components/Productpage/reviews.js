@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-import CustomerReviewCard from "./../Homepage/CustomerReviewCard";
+import ReviewCard from "./ReviewCard";
 
 const Reviews = () => {
   return (
@@ -15,7 +15,7 @@ const Reviews = () => {
           border: "2px solid #3577A1",
         }}
       >
-        <CustomerReviewCard></CustomerReviewCard>
+        <ReviewCard></ReviewCard>
       </Box>
     </>
   );

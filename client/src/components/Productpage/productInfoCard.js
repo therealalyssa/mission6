@@ -4,23 +4,24 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, Rating } from "@mui/material";
+// import CustomerReviews from './CustomerReviews.json';
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Box } from "@mui/system";
-import "./../Homepage/CustomerReviewCard.css";
+import "./ReviewCard.css";
 import NavigateLeftButton from "./../Homepage/NavigateLeftButton";
-import NavigateRightButton from "./../Homepage/NavigateRightButton";
-import "react-multi-carousel/lib/styles.css";
+import NavigateRightButton from "./../Homepage/NavigateLeftButton";
 
-const ReviewCard = () => {
+const ProductCard = () => {
   const [reviews, setReviews] = useState([]);
+  // const [showMore, setShowMore] = useState(false);
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5001/reviews`)
+      .get(`http://localhost:5001/computers`)
       .then((response) => {
         setReviews(response.data);
-        // console.log(response.data);
+        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -29,18 +30,12 @@ const ReviewCard = () => {
 
   return (
     <>
-      <Box>
-        <br></br>
-      </Box>
-      <Box>
-        <br></br>
-      </Box>
       <Typography
         variant="h6"
         fontSize="1.5rem"
-        sx={{ marginLeft: "8.3rem", marginBottom: "2rem" }}
+        sx={{ marginLeft: "8.3rem", marginBottom: "3rem" }}
       >
-        Reviews for HP Probook
+        More Products For Your Business
       </Typography>
 
       <Box
@@ -49,12 +44,11 @@ const ReviewCard = () => {
           flexDirection: "row",
           justifyContent: "space-evenly",
           alignItems: "center",
-          marginBottom: "2rem",
         }}
       >
         <NavigateLeftButton />
 
-        {reviews.slice(0, 2).map((result) => {
+        {reviews.slice(0, 4).map((result) => {
           return (
             <Card
               key={result._id}
@@ -66,7 +60,7 @@ const ReviewCard = () => {
                 <CardMedia
                   component="img"
                   height="100%"
-                  src={result.img}
+                  src={result.image}
                   alt={result.name}
                 />
                 <CardContent>
@@ -99,9 +93,8 @@ const ReviewCard = () => {
         })}
         <NavigateRightButton />
       </Box>
-      {/* <Pagination count={2} sx={ { display: 'flex' , justifyContent: 'center'}} ></Pagination> */}
     </>
   );
 };
 
-export default ReviewCard;
+export default ProductCard;

@@ -10,15 +10,16 @@ app.use(express.json());
 
 app.use(require("./routes/quickSortSonja.routes.js"));
 app.use(require("./routes/homepageReviews.routes.js"));
+app.use(require("./routes/productpageComputers.routes.js"));
+app.use(require("./routes/quicksortAlyssa.routes.js"));
 
 // get driver connection
 const dbo = require("./db/db.js");
- 
+
 app.listen(port, () => {
   // perform a database connection when server starts
   dbo.connectToServer(function (err) {
     if (err) console.error(err);
- 
   });
   console.log(`Server is running on port: ${port}`);
 });

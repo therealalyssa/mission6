@@ -127,33 +127,31 @@ export default function Quizpg1() {
               marginBottom={2}
             >
               <Grid item md={3}>
-                <a href="#;" className="infocard">
-                  <Card
-                    sx={{ maxWidth: 160 }}
-                    variant="outlined"
-                    className="infocard"
-                  >
-                    <CardActionArea>
-                      <CardContent>
-                        <Typography
-                          sx={{ fontWeight: "bold" }}
-                          gutterBottom
-                          variant="p"
-                          component="div"
-                        >
-                          Business
-                        </Typography>
-                      </CardContent>
-                      <CardMedia
-                        component="img"
-                        height="90"
-                        width="60"
-                        image={Business}
-                        alt="green iguana"
-                      />
-                    </CardActionArea>
-                  </Card>
-                </a>
+                <Card
+                  sx={{ maxWidth: 160 }}
+                  variant="outlined"
+                  className="infocard"
+                >
+                  <CardActionArea>
+                    <CardContent>
+                      <Typography
+                        sx={{ fontWeight: "bold" }}
+                        gutterBottom
+                        variant="p"
+                        component="div"
+                      >
+                        Business
+                      </Typography>
+                    </CardContent>
+                    <CardMedia
+                      component="img"
+                      height="90"
+                      width="60"
+                      image={Business}
+                      alt="green iguana"
+                    />
+                  </CardActionArea>
+                </Card>
               </Grid>
               <Grid item md={3}>
                 <Card

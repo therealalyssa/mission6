@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { SliderData } from "./SliderData";
-import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
-import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
+import { Box, Fab } from "@mui/material";
+
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -21,8 +23,17 @@ const ImageSlider = ({ slides }) => {
 
   return (
     <section className="slider">
-      <ArrowCircleLeftIcon className="left-arrow" onClick={prevSlide} />
-      <ArrowCircleRightIcon className="right-arrow" onClick={nextSlide} />
+      <Box sx={{ "& > :not(style)": { m: 1 } }}>
+        <Fab
+          size="small"
+          sx={{ left: 40, color: "#111827", backgroundColor: "#F3F4F6" }}
+          aria-label={"left"}
+          onClick={prevSlide}
+        >
+          <ArrowBackIosIcon sx={{ fontSize: "medium" }} />
+        </Fab>
+      </Box>
+
       {SliderData.map((slide, index) => {
         return (
           <div
@@ -35,6 +46,16 @@ const ImageSlider = ({ slides }) => {
           </div>
         );
       })}
+      <Box sx={{ "& > :not(style)": { m: 1 } }}>
+        <Fab
+          size="small"
+          sx={{ right: 40, color: "#111827", backgroundColor: "#F3F4F6" }}
+          aria-label={"left"}
+          onClick={nextSlide}
+        >
+          <ArrowForwardIosIcon sx={{ fontSize: "medium" }} />
+        </Fab>
+      </Box>
     </section>
   );
 };
