@@ -12,7 +12,7 @@ const ProductInfo = () => {
           float: "left",
           flexDirection: "column",
           width: "74%",
-          height: "400px",
+          height: "600px",
           border: "2px solid #3577A1",
         }}
       >

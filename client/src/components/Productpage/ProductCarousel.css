@@ -49,7 +49,7 @@
   .hero-image-small-nav2 {
     position: absolute;
     left: 3%;
-    top: 30vh;
+    top: 28vh;
     color: #3577A1;
 }
 
@@ -82,44 +82,59 @@
   position: absolute;
   display:flex;
   padding-left: 50%;;
-  padding-top:19%;
+  padding-top:18%;
 }
 .rightsidetext5 {
   position: absolute;
   display:flex;
   padding-left: 50%;;
-  padding-top:25%;
+  padding-top:22%;
 }
 .rightsidetext6 {
   position: absolute;
   display:flex;
-  padding-left: 50%;;
-  padding-top:30%;
+  padding-left: 49.4%;;
+  padding-top:26%;
 }
 .rightsidetext7 {
   position: absolute;
   display:flex;
   padding-left: 50%;;
-  padding-top:32%;
+  padding-top:28%;
 }
 .rightsidetext8 {
   position: absolute;
   display:flex;
   padding-left: 50%;;
-  padding-top:34%;
+  padding-top:30%;
 }
 .rightsidetext9 {
   position: absolute;
   display:flex;
   padding-left: 50%;;
-  padding-top:36%;
+  padding-top:32%;
 }
 
-/* .quantitybtn {
-  position: absolute;
-  display:flex;
-} */
+
 
 ul {
   list-style-image: url('./../img/Vector.png');
+}
+
+li.product1 {
+  list-style-image: url('./../img/Vector10.png');
+
+}
+
+li.product2 {
+  list-style-image: url('./../img/Vector11.png');
+
+}
+li.product3 {
+  list-style-image: url('./../img/Vector12.png');
+
+}
+li.product4 {
+  list-style-image: url('./../img/Vector13.png');
+
 }

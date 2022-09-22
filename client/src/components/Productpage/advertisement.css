@@ -6,3 +6,30 @@
     position: 'fixed';
     top: '-15px'
 }
+
+li.item1 {
+    list-style-image: url('./../img/Vector.png');
+  
+  }
+  li.item2 {
+    list-style-image: url('./../img/Vector3.png');
+
+  }
+  li.item3 {
+    list-style-image: url('./../img/Vector5.png');
+ 
+  }
+
+
+li.item4 {
+  list-style-image: url('./../img/Vector2.png');
+
+}
+li.item5 {
+  list-style-image: url('./../img/Vector4.png');
+
+}
+li.item6 {
+  list-style-image: url('./../img/Vector6.png');
+
+}

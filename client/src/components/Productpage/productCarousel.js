@@ -17,6 +17,8 @@ import Select from "@mui/material/Select";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
+import "./advertisement.css";
+
 const ProductCarousel = () => {
   const [age, setAge] = React.useState("");
 
@@ -36,13 +38,13 @@ const ProductCarousel = () => {
         }}
       >
         <div spacing={2} className="hero-image-small-nav2">
-          <Link className="hero-image-small-nav-text2" to="/">
+          <Link className="hero-image-small-nav-text2" to="/e">
             Home {">"}{" "}
           </Link>
           <Link className="hero-image-small-nav-text2" to="/">
             Computer & Tablets {">"}{" "}
           </Link>
-          <Link className="hero-image-small-nav-text2" to="/">
+          <Link className="hero-image-small-nav-text2" to="/ListingPag">
             Laptops {">"}{" "}
           </Link>
           <Link className="hero-image-small-nav-text2" to="/">
@@ -97,34 +99,11 @@ const ProductCarousel = () => {
           </Box>
         </Box>
         <Box className="rightsidetext4">
-          <Box fontSize="1.6rem" fontWeight="bold" color="black">
+          <Box fontSize="1rem" fontWeight="bold" color="black">
             {" "}
             Quantity:
           </Box>
         </Box>
-        {/* <Box className="quantitybtn" sx={{ marginLeft: "20 rem" }}>
-          <FormControl>
-            <InputLabel id="demo-simple-select-label"></InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={age}
-              label="Age"
-              onChange={handleChange}
-            >
-              <MenuItem value={1}>1</MenuItem>
-              <MenuItem value={2}>2</MenuItem>
-              <MenuItem value={3}>3</MenuItem>
-              <MenuItem value={4}>4</MenuItem>
-              <MenuItem value={5}>5</MenuItem>
-              <MenuItem value={6}>6</MenuItem>
-              <MenuItem value={7}>7</MenuItem>
-              <MenuItem value={8}>8</MenuItem>
-              <MenuItem value={9}>9</MenuItem>
-              <MenuItem value={10}>10</MenuItem>
-            </Select>
-          </FormControl>
-        </Box> */}
 
         <Box className="rightsidetext5">
           <Box>
@@ -149,42 +128,28 @@ const ProductCarousel = () => {
             ></Button>
           </Box>
         </Box>
-        <Box className="rightsidetext6">
-          <Box fontSize="1" fontWeight="bold" color="black">
-            {" "}
-            Shipping: Typically arrives 2-3 working days
-          </Box>
+        <Box className="rightsidetext6" fontSize="0.7rem" fontWeight="bold">
+          <ul>
+            <li className="product1">
+              {" "}
+              Shipping: Typically arrives 2-3 working days
+            </li>
+            <li className="product2">
+              Click & Collect: Available from 4 stores
+            </li>
+            <li className="product3">
+              Returns: We offer a 7 day exchange policy
+            </li>
+            <li className="product4"> Warranty: 12 months</li>
+          </ul>
         </Box>
-        <Box className="rightsidetext7">
-          <Box fontSize="1" fontWeight="bold" color="black">
-            {" "}
-            Click & Collect: Available from 4 stores{" "}
-          </Box>
-        </Box>
-        <Box className="rightsidetext8">
-          <Box fontSize="1" fontWeight="bold" color="black">
-            {" "}
-            Returns: We offer a 7 day exchange policy
-          </Box>
-        </Box>
-        <Box className="rightsidetext9">
-          <Box fontSize="1" fontWeight="bold" color="black">
-            {" "}
-            Warranty:12months{" "}
-          </Box>
-        </Box>
-        {/* <ul>
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
-        </ul> */}
       </Box>
 
       <Box
         className="quantitybtn"
-        sx={{ position: "absolute", paddingLeft: "59%", paddingTop: "18%" }}
+        sx={{ position: "absolute", paddingLeft: "55.5%", paddingTop: "17.5%" }}
       >
-        <FormControl>
+        <FormControl sx={{ minWidth: 6 }} size="small">
           <InputLabel id="demo-simple-select-label"></InputLabel>
           <Select
             labelId="demo-simple-select-label"

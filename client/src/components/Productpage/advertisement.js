@@ -1,12 +1,5 @@
 import { Box, ImageList, Typography, Button } from "@mui/material";
 import "./advertisement.css";
-import Stack from "@mui/material/Stack";
-import Vector from "./../img/Vector.png";
-import Vector2 from "./../img/Vector2.png";
-import Vector3 from "./../img/Vector3.png";
-import Vector4 from "./../img/Vector4.png";
-import Vector5 from "./../img/Vector5.png";
-import Vector6 from "./../img/Vector6.png";
 import Sidebar from "./../img/sidebar1.png";
 
 import flexi from "./../img/flexi.png";
@@ -30,7 +23,7 @@ const Advertisement = () => {
           flexDirection: "column",
           width: "25%",
           height: "2000px",
-          border: "2px solid #3577A1",
+          // border: "2px solid #3577A1",
           backgroundColor: "#F9FBFF",
         }}
       >
@@ -72,36 +65,29 @@ const Advertisement = () => {
           Apply for a Business Account today!
         </Box>
         <br></br>
-        <Stack direction="row" spacing={1} justifyContent="left">
-          <Typography>
-            <img src={Vector} alt="tick" />
-            Procurement
-          </Typography>
-          <Typography>
-            <img src={Vector2} alt="tick" />
-            Onsite Support
-          </Typography>
-        </Stack>
-        <Stack direction="row" spacing={1} justifyContent="left">
-          <Typography>
-            <img src={Vector3} alt="tick" />
-            Repair & Production
-          </Typography>
-          <Typography>
-            <img src={Vector4} alt="tick" />
-            Install & Display
-          </Typography>
-        </Stack>
-        <Stack direction="row" spacing={1} justifyContent="left">
-          <Typography>
-            <img src={Vector5} alt="tick" />
-            Software & Development
-          </Typography>
-          <Typography>
-            <img src={Vector6} alt="tick" />
-            Managed Service
-          </Typography>
-        </Stack>
+        <Box fontSize="0.7rem" fontWeight="bold">
+          <ul>
+            <li className="item1">Procurement</li>
+            <li className="item2">Repair & Production</li>
+            <li className="item3">Software & Development</li>
+            <Box
+              fontSize="0.7rem"
+              fontWeight="bold"
+              sx={{
+                display: "flex",
+                marginLeft: "140px",
+                marginTop: "-70px",
+              }}
+            >
+              <ul>
+                <li className="item4">Onsite Support</li>
+                <li className="item5">Install & Display</li>
+                <li className="item6">Managed Service</li>
+              </ul>
+            </Box>
+          </ul>
+        </Box>
+
         <Box
           sx={{
             display: "flex",
