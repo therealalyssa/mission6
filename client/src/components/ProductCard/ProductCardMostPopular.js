@@ -35,7 +35,7 @@ useEffect(() => {
         <NavigateLeftButton/>
       {computer.slice(5, 9).map((card) => {
         return (
-        <Card key={card._id} className="card-container" sx={{ maxWidth: 290, height: 400, margin: 4}} elevation={3}>
+        <Card key={card._id} className="card-container" sx={{ maxWidth: 290, height: 400, margin: 3.3}} elevation={3}>
           <CardHeader sx={{ height: 0 }}
             action={
               <IconButton onClick={() => console.log('favorite')}>

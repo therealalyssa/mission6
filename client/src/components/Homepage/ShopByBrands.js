@@ -1,52 +1,68 @@
 import { Box, Card, Typography } from '@mui/material'
-import shopByBrandsData from "./shopByBrandsData.json";
 import OurFulfilmentOptions from './OurFulfilmentOptions';
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 
 const ShopByBrands = () => {
 
-  const returnedItem = shopByBrandsData.map((result) => {
-    return (result.brand)
+  const [brands, setBrands] = useState([]);
+
+  useEffect(() => {
+      axios
+          .get(`http://localhost:5001/brands`)
+          .then((response) => {
+              setBrands(response.data);
+              // console.log(response.data);
+          })
+          .catch((error) => {
+              console.log(error);
+          });
+  }, []);
+
+  const returnedItem = brands.map((result) => {
+    return (result)
 })
 
-const arr = returnedItem;
-console.log(arr);
+const array = returnedItem;
+console.log(array);
 
-const quickSort = (arr, length = arr.length - 1, start = 0) => {
-  if (arr.length < 2) return arr // base case
+const quickSort = (array, length = array.length - 1, start = 0) => {
+  if (array.length < 2) return array // base case
 
-  const pivot = arr[arr.length - 1]; //pivot value
+  const pivot = array[array.length - 1]; //pivot value last item in array
   const left = [ ];  // left handside array
   const right = [ ]; // right handside array
 
  while (start < length) {  // comparing and pushing
-      if (arr[start] < pivot){
-        left.push(arr[start])
+      if (array[start] < pivot){
+        left.push(array[start])
       }
       else {
-        right.push(arr[start])
+        right.push(array[start])
       }
-     start++ //  incrementing start value
+     start++ 
   }
-          // calling quick sort recursively
+          
   return [...quickSort(left), pivot, ...quickSort(right)];
 }
 
-console.log(quickSort(arr));
+console.log(quickSort(array));
+
+const quickSortData = quickSort(array);
+
   return (
     <>
     <Typography variant="h6"  fontSize='2.3rem' sx={{marginLeft:'7rem',  padding:'1rem'}}>
     Shop by Brands
     </Typography>
 
-
-    
   <Box
 
     sx={{
       width: '75vw',
       height: '30vh',
-      marginLeft: '5rem',
+      marginLeft: '4rem',
       display:'flex', 
       flexDirection:'row', 
       justifyContent:'flex-end', 
@@ -54,10 +70,10 @@ console.log(quickSort(arr));
       padding: '1rem',
   }}
     >
-      {shopByBrandsData.map((logos) => {
+      {quickSortData.map((logos) => {
         return (
       <Box key={logos.brand}>
-        <Card sx={{ width: 230, height: 50, margin: 4, display:'flex', justifyContent:'center', cursor:'pointer'}}>
+        <Card sx={{ width: 220, height: 50, margin: 4, display:'flex', justifyContent:'center', cursor:'pointer'}}>
           <img key={logos.brand}  src={logos.img} alt={logos.brand}></img>
         </Card>
       </Box>

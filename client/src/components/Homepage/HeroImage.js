@@ -3,7 +3,7 @@ import "./HeroImage.css";
 import heroBackground from "../img/background.png";
 import { Link } from "react-router-dom";
 import Quiz from "../Quiz";
-// import { Button } from '@mui/material';
+import { Button } from '@mui/material';
 
 
 const HeroImage = () => {
@@ -21,7 +21,9 @@ const HeroImage = () => {
       <p>Take an easy quiz and find out in three quick steps!</p>
       
       <div  className='hero-image-button'>
-      {/* <Button  style={{ color:'white', backgroundColor: "#3577A1", width: "12vw" }} variant="contained" >Let's go!</Button> */}
+      <Button sx={{position:'absolute', marginBottom:'4rem', zIndex:'10'}}  
+              style={{ color:'white', backgroundColor: "#3577A1", width: "12vw", height:"39px" }} 
+              variant="contained" >Let's go!</Button>
       <Quiz></Quiz>
       </div>
 

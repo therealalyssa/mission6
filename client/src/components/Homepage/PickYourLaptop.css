@@ -1,10 +1,11 @@
 .pick-your-laptop-container {
    display:flex;
+   align-items: center;
 }
 
 .pick-your-laptop-button {
     position: absolute;
-    bottom: -330vh;
+    margin-top: 12rem;
     left: 63vw;
 }
 
