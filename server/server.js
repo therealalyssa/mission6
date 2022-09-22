@@ -12,6 +12,7 @@ app.use(require("./routes/quickSortSonja.routes.js"));
 app.use(require("./routes/homepageReviews.routes.js"));
 app.use(require("./routes/productpageComputers.routes.js"));
 app.use(require("./routes/quicksortAlyssa.routes.js"));
+app.use(require("./routes/shopByBrands.routes.js"));
 
 // get driver connection
 const dbo = require("./db/db.js");

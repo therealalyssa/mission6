@@ -19,10 +19,11 @@ const QuickSortSonja = () => {
             });
     }, []);
 
-
     const returnedItem = products.map((result) => {
         return (result.name)
     })
+
+    console.log(returnedItem);
 
     const arr = returnedItem;
  
@@ -42,6 +43,7 @@ const QuickSortSonja = () => {
         return [...quickSort(left), pivot, ...quickSort(right)];
     }
 
+    console.log(quickSort(arr));
 
     return (
         <>
