@@ -2,13 +2,7 @@ import React from 'react';
 import { Button, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton, Rating, Typography } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import HPProbookLaptop1 from "../img/HPProbookLaptop1.png";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
-// const useStyles = makeStyles({
-//   root: {
-//     minWidth: 200
-//   }
-// })
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 
 const card = [ //add product array
   { 
@@ -33,7 +27,7 @@ const ProductCard = () => {
 
             {/* {cards.map((card)) => <p> {card}}</p> )} */}
 
-        <CardContent sx={{alignItems:'center'}} >
+        <CardContent sx={{justifyContent:'center'}} >
           {/* {cards.map((card) =>  */}
       
             <CardMedia
