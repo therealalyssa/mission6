@@ -1,10 +1,10 @@
 import React from 'react';
-import { Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton, Rating, Typography } from '@mui/material';
+import { Button, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton, Rating, Typography } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import axios from "axios";
+// import HPProbookLaptop1 from "../img/HPProbookLaptop1.png";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import axios from 'axios'
 import { useState, useEffect } from "react";
-
 
 
 const ProductCard = () => {
@@ -37,9 +37,10 @@ useEffect(() => {
             }
           />
 
-       <Box sx={{display:'flex', justifyContent:'center' }}>
-  
-        <CardContent>
+            {/* {cards.map((card)) => <p> {card}}</p> )} */}
+
+        <CardContent sx={{justifyContent:'center'}} >
+          {/* {cards.map((card) =>  */}
       
             <CardMedia
               component="img"
@@ -72,7 +73,7 @@ useEffect(() => {
               </Button>
             </CardActions>
           </CardContent>
-          </Box>
+          {/* </Box> */}
         </Card>
           )})}
       </div>

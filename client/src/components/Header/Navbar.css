@@ -11,8 +11,3 @@
     justify-content: flex-start;
 }
 
-.navbar-row2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}

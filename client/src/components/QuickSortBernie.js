@@ -1,4 +1,26 @@
-// import React from 'react'
+// import "./QuickSortBernie.css";
+import axios from "axios";
+import { useState, useEffect } from "react";
+
+const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        axios
+            .get(`http://localhost:5001/products`)
+            .then((response) => {
+                setProducts(response.data);
+                console.log(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
+
+    const returnedItem = products.map((result) => {
+        return (result.name)
+    })
+
+    const arr = returnedItem;
 
 function QuickSortBernie(array) {
   if (array.length <= 1) {
