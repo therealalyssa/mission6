@@ -31,6 +31,7 @@ export default function NestedList() {
                 border: "1px solid #CFD4D9",
                 width: "405px", 
                 paddingLeft: "75px",
+                marginTop: "522px"
                 }} 
 
             variant="outlined">
@@ -44,7 +45,8 @@ export default function NestedList() {
                 height: "982px",
                 paddingLeft: "75px",
                 paddingTop: "5px",
-                paddingBottom: "15px"
+                paddingBottom: "15px",
+                marginTop: "50px"
             }}>
             
             <CardContent>
