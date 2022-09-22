@@ -1,32 +1,32 @@
 // import "./QuickSortBernie.css";
 import axios from "axios";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
-const [products, setProducts] = useState([]);
+// const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        axios
-            .get(`http://localhost:5001/products`)
-            .then((response) => {
-                setProducts(response.data);
-                console.log(response.data);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    }, []);
+// useEffect(() => {
+//   axios
+//     .get(`http://localhost:5001/products`)
+//     .then((response) => {
+//       setProducts(response.data);
+//       console.log(response.data);
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// }, []);
 
-    const returnedItem = products.map((result) => {
-        return (result.name)
-    })
+// const returnedItem = products.map((result) => {
+//   return result.name;
+// });
 
-    const arr = returnedItem;
+// const arr = returnedItem;
 
 function QuickSortBernie(array) {
   if (array.length <= 1) {
     return array;
-  } 
-  
+  }
+
   const pivot = array[array.length - 1];
   const leftArray = [];
   const rightArray = [];
@@ -34,20 +34,20 @@ function QuickSortBernie(array) {
     el < pivot ? leftArray.push(el) : rightArray.push(el);
   }
 
-  return [...QuickSortBernie(leftArray), pivot, ...QuickSortBernie(rightArray)]; 
+  return [...QuickSortBernie(leftArray), pivot, ...QuickSortBernie(rightArray)];
 }
 
 //test array:
-const array = [] //add array
+const array = []; //add array
 
 console.log(QuickSortBernie(array));
 
 // const QuickSortBernie = () => {
 //   return (
 //     <div>
-      
+
 //     </div>
 //   )
 // }
 
-export default QuickSortBernie
+export default QuickSortBernie;
