@@ -1,11 +1,19 @@
 import React from "react";
 import Footer from "../components/Footer";
-import Quiz from "../components/Quiz";
+import Advertisment from "../components/Productpage/advertisement";
+import ProductCarousel from "../components/Productpage/productCarousel";
+import ProductInfo from "../components/Productpage/productInfo";
+import Reviews from "../components/Productpage/reviews";
+import Header from "../components/Header/Header";
 
 const Homepage = () => {
   return (
     <>
-      <Quiz />
+      <Header></Header>
+      <ProductCarousel></ProductCarousel>
+      <Advertisment></Advertisment>
+      <ProductInfo></ProductInfo>
+      <Reviews></Reviews>
       <Footer></Footer>
     </>
   );
