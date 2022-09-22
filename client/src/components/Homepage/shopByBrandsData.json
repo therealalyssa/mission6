@@ -1,41 +1,33 @@
 [
     {
-      "id": 1,
       "brand": "acer",
       "img": "https://cdn.filestackcontent.com/vzwfkqqdRc2G9SNcEZr6"
     },
     {
-        "id": 2,
         "brand": "dell",
         "img": "https://cdn.filestackcontent.com/IF60TvxqRAmQ7fgF97s7"
       },
       {
-        "id": 3,
         "brand": "apple",
         "img": "https://cdn.filestackcontent.com/F1Ggx0VCSUObIk14kyj6"
       },
       {
-        "id": 4,
         "brand": "samsung",
         "img": "https://cdn.filestackcontent.com/OiCIqqplQyqpl5VPuDHA"
       },
       {
-        "id": 5,
         "brand": "hp",
         "img": "https://cdn.filestackcontent.com/2hX66VaQm2sfh8Ss5w16"
       },
       {
-        "id": 6,
         "brand": "asus",
         "img": "https://cdn.filestackcontent.com/qm8WfpkRKqZxQyqlF3Cl"
       },
       {
-        "id": 7,
         "brand": "lenovo",
         "img": "https://cdn.filestackcontent.com/Z6XOTRgyfrzPvvz435Qy"
       },
       {
-        "id": 8,
         "brand": "sony",
         "img": "https://cdn.filestackcontent.com/apWTwEWkSoKIWzTFcpiQ"
       }

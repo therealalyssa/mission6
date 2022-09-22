@@ -1,13 +1,16 @@
 import React from 'react';
-import { Button, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton, Rating, Typography } from '@mui/material';
+import { Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton, Rating, Typography } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-// import HPProbookLaptop1 from "../img/HPProbookLaptop1.png";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
-import axios from 'axios'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import axios from "axios";
 import { useState, useEffect } from "react";
+import NavigateLeftButton from '../Homepage/NavigateLeftButton';
+import NavigateRightButton from '../Homepage/NavigateRightButton';
+import { Link } from "react-router-dom";
 
 
-const ProductCard = () => {
+
+const ProductCardMostPopular = () => {
 
 const [computer, setComputer] = useState([]);
 
@@ -26,9 +29,13 @@ useEffect(() => {
   return (
     <div>
       <div>
-      {computer.map((card) => {
+      <Box  sx={{ display: 'flex', flexDirection: 'row', justifyContent:'space-evenly', 
+      flexWrap:'wrap', alignItems:'center', marginBottom:'2rem'}}>
+
+        <NavigateLeftButton/>
+      {computer.slice(5, 9).map((card) => {
         return (
-        <Card key={card._id} className="card-container" sx={{ maxWidth: 290, height: 400}} elevation={3}>
+        <Card key={card._id} className="card-container" sx={{ maxWidth: 290, height: 400, margin: 4}} elevation={3}>
           <CardHeader sx={{ height: 0 }}
             action={
               <IconButton onClick={() => console.log('favorite')}>
@@ -37,10 +44,9 @@ useEffect(() => {
             }
           />
 
-            {/* {cards.map((card)) => <p> {card}}</p> )} */}
-
-        <CardContent sx={{justifyContent:'center'}} >
-          {/* {cards.map((card) =>  */}
+       <Box sx={{display:'flex', justifyContent:'center' }}>
+  
+        <CardContent>
       
             <CardMedia
               component="img"
@@ -62,23 +68,28 @@ useEffect(() => {
             </Typography>
             
             <CardActions sx={{ justifyContent:'center'}}>
-              <Button className="add-to-cart"
+            <Link to="/Productpage" style={{textDecoration:'none'}}>
+              <Button 
                 onClick={() => console.log('add to cart')}
                 type="submit" 
                 variant="contained"
                 startIcon={<ShoppingCartIcon />}
                 style={{ backgroundColor: "#E2873C" }}
+            
               >
               Add to Cart
               </Button>
+              </Link>
             </CardActions>
           </CardContent>
-          {/* </Box> */}
+          </Box>
         </Card>
           )})}
+          <NavigateRightButton/>
+          </Box>
       </div>
     </div>
   )
 }
 
-export default ProductCard
+export default ProductCardMostPopular
