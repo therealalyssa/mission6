@@ -8,7 +8,7 @@ import {
   // StyledIconButton,
   // TextField,
   Toolbar,
-  Typography
+  Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
 // import { useState } from 'react';
@@ -55,7 +55,6 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      
       <div className="navbar-container">
         <Box>
           <AppBar
@@ -190,7 +189,6 @@ function Navbar() {
           </AppBar>
         </Box>
       </div>
-
     </div>
   );
 }
