@@ -21,11 +21,13 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import MenuIcon from '@mui/icons-material/Menu';
 // import { ClassNames } from '@emotion/react';
 
-// const pages = ['Card', 'Carousel', 'Table'];
-
   
 const StyledButton = styled(Button)({
-    backgroundColor: '#1e4261'
+    backgroundColor: '#1e4261',
+    height: "37px",
+    fontSize: "16px",
+    textTransform: "lowercase",
+    flexWrap: "nowrap"
 })
 
 // const StyledIconButton = styled(IconButton)({
@@ -41,20 +43,10 @@ function Navbar() {
         borderRadius: theme.shape.borderRadius,
       }));
       
-    //   const SearchIconWrapper = styled('div')(({ theme }) => ({
-    //     padding: theme.spacing(0, 2),
-    //     height: '100%',
-    //     position: 'absolute',
-    //     pointerEvents: 'none',
-    //     display: 'flex',
-    //     alignItems: 'center',
-    //     justifyContent: 'center',
-    //   }));
-      
       const StyledInputBase = styled(InputBase)(({ theme }) => ({
         color: 'inherit',
         '& .MuiInputBase-input': {
-          padding: theme.spacing(1, 1, 1, 0),
+        //   padding: theme.spacing(1, 1, 1, 0),
           // vertical padding + font size from searchIcon
           paddingLeft: `calc(1em + ${theme.spacing(4)})`,
           transition: theme.transitions.create('width'),
@@ -69,15 +61,15 @@ function Navbar() {
             <div className="navbar-container">
                 <Box sx={{flexGrow: 1, marginBottom: 3}}>
                     <AppBar 
-                    position='static'
-                    style={{ backgroundColor: "#214f74", height: "136px" }}
+                        position='static'
+                        style={{ backgroundColor: "#214f74", width: "100%", height: "136px" }}
                     >
                         <Toolbar className="navbar-row1">
                             <div 
                             style={{
                                 display: "flex",
                                 flexDirection: "row",
-                                justifyContent: "flex-start"
+                                justifyContent: "flex-start",
                             }}
                             
                             className="navbar-row1-left">
@@ -111,24 +103,28 @@ function Navbar() {
                             </div>
 
                             <div 
-                            style={{
-                                display: "flex",
-                                flexDirection: "row",
-                                justifyContent: "flex-end"
-                            }}
-                            
-                            className="navbar-row1-right">
+                                className="navbar-row1-right"
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    justifyContent: "flex-end"
+                                }}
+                            >
 
-                                <StyledButton variant='contained' size='medium' style={{ backgroundColor: "#E2873C"}}>
+                                <StyledButton variant='contained' size='small' 
+                                    style={{ 
+                                        backgroundColor: "#E2873C"
+                                    }}
+                                >
                                     <SearchIcon/>
                                 </StyledButton>
-                                <StyledButton variant='contained' size='medium' startIcon={<PersonIcon/>}>
+                                <StyledButton variant='contained' size='xs' startIcon={<PersonIcon/>}>
                                     Sign In or Create Account
                                 </StyledButton>
-                                <StyledButton variant='contained' size='medium' startIcon={<FavoriteIcon/>}>
+                                <StyledButton variant='contained' size='xs' startIcon={<FavoriteIcon/>}>
                                     Wish List
                                 </StyledButton>
-                                <StyledButton variant='contained' size='medium'>
+                                <StyledButton variant='contained' size='xs'>
                                     <ShoppingCartIcon/>
                                 </StyledButton>
                             </div>
@@ -154,7 +150,13 @@ function Navbar() {
                                     <MenuIcon />
                                     Departments
                                 </div>
-                                <div>
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        flexDirection: "row",
+                                        justifyContent: "space-evenly",
+                                    }}
+                                >
                                     Brands
                                     Services
                                     Promotions

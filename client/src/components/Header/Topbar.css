@@ -3,6 +3,7 @@
     flex-direction: row;
     background-color: #000000;
     justify-content: space-evenly;
+    width: 100%;
 }
 
 .top-bar-text-right {

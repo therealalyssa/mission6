@@ -1,0 +1,7 @@
+.listing-banner-container {
+    display: flex;
+    justify-content: flex-end; 
+    width: 1392px;
+    height: 396px;
+    /* padding-left: 528px; */
+}
