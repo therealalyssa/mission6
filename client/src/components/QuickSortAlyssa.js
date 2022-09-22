@@ -1,4 +1,4 @@
-import "./QuickSortSonja.css";
+import "./QuickSortAlyssa.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Footer from "./Footer";
@@ -40,19 +40,19 @@ const QuickSortAlyssa = () => {
 
   return (
     <>
-      <div className="quick-sort-sonja-container">
+      <div className="layout">
         <div>
-          <h1>Quick Sort with products from the MongoDB database</h1>
+          <h1>Sorting the prices:</h1>
         </div>
 
-        <div className="quick-sort-sonja-list">
-          <h2>Hi:</h2>
-          <p className="quick-sort-sonja-items">{arr}</p>
+        <div className="title">
+          <h2>Unsorted Computer Prices:</h2>
+          <p className="object">{arr}</p>
         </div>
 
-        <div className="quick-sort-sonja-list">
-          <h2>quick sort array:</h2>
-          <p className="quick-sort-sonja-items">
+        <div className="title">
+          <h2>Using Quick Sort to:</h2>
+          <p className="object">
             <span>{quickSort(arr)}</span>
           </p>
         </div>
