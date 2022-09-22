@@ -12,7 +12,7 @@ import {
     } from '@mui/material';
 import { Box } from '@mui/system';
 // import { useState } from 'react';
-import logo from '../img/logo.png';
+import logo from './logo.png';
 import SearchIcon from '@mui/icons-material/Search';
 import PersonIcon from '@mui/icons-material/Person';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -70,6 +70,8 @@ function Navbar() {
                                 display: "flex",
                                 flexDirection: "row",
                                 justifyContent: "flex-start",
+                                // paddingTop: "16px"
+                                width: "100%"
                             }}
                             
                             className="navbar-row1-left">
@@ -118,17 +120,22 @@ function Navbar() {
                                 >
                                     <SearchIcon/>
                                 </StyledButton>
+
                                 <StyledButton variant='contained' size='xs' startIcon={<PersonIcon/>}>
                                     Sign In or Create Account
                                 </StyledButton>
+                                
                                 <StyledButton variant='contained' size='xs' startIcon={<FavoriteIcon/>}>
                                     Wish List
                                 </StyledButton>
+                                
                                 <StyledButton variant='contained' size='xs'>
                                     <ShoppingCartIcon/>
                                 </StyledButton>
+
                             </div>
                         </Toolbar>
+
                         <Toolbar>
                             <div 
                                 className="navbar-row2"
@@ -136,6 +143,7 @@ function Navbar() {
                                     display: "flex",
                                     flexDirection: "row",
                                     justifyContent: "space-evenly",
+                                    width: "100%"
                             }}
                             >
                                 <div 
