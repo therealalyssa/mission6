@@ -424,7 +424,7 @@ const Advertisement = () => {
           sx={{ display: "flex", justifyContent: "center" }}
           className="quizbtn"
         >
-          <Quizpg1></Quizpg1>
+          <Quizpg1>Start Quiz</Quizpg1>
         </Box>
       </Box>
     </>
