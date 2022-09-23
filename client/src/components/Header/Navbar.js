@@ -80,7 +80,7 @@ function Navbar() {
             <div>
                 <Search
                   style={{
-                    width: "923px",
+                    width: "40vw",
                     height: "37px",
                     backgroundColor: "white",
                     float: "left",
