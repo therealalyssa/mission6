@@ -7,7 +7,6 @@ import { CardActionArea, Rating } from "@mui/material";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Box } from "@mui/system";
-import "./../Homepage/CustomerReviewCard.css";
 import NavigateLeftButton from "./../Homepage/NavigateLeftButton";
 import NavigateRightButton from "./../Homepage/NavigateRightButton";
 import "react-multi-carousel/lib/styles.css";
@@ -20,7 +19,6 @@ const ReviewCard = () => {
       .get(`http://localhost:5001/reviews2`)
       .then((response) => {
         setReviews(response.data);
-        // console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
