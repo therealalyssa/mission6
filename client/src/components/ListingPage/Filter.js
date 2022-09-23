@@ -1,18 +1,23 @@
 import * as React from 'react';
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import Collapse from '@mui/material/Collapse';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
 import { 
     Box, 
     Button, 
     Card, 
-    CardContent, 
-    Typography 
+    CardContent,
+    Checkbox,
+    Collapse,
+    FormGroup,
+    List,
+    ListItemButton,
+    ListItemText,
+    Typography, 
+    FormControlLabel
 } from '@mui/material';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
 import ClearIcon from '@mui/icons-material/Clear';
+
+
 
 export default function NestedList() {
   const [open, setOpen] = React.useState(true);
@@ -20,6 +25,7 @@ export default function NestedList() {
   const handleClick = () => {
     setOpen(!open);
   };
+
 
   return (
 
@@ -53,13 +59,13 @@ export default function NestedList() {
                 
                 <Typography>
                     <List
-                    sx={{ 
+                        sx={{ 
                         width: '100%', 
                         maxWidth: 360, 
                         bgcolor: 'background.paper' }}
 
-                    component="nav"
-                    aria-labelledby="nested-list-subheader"
+                        component="nav"
+                        aria-labelledby="nested-list-subheader"
                     >
                         <ListItemButton onClick={handleClick}>
                             <ListItemText primary="Brand" />
@@ -82,91 +88,132 @@ export default function NestedList() {
                                     <ListItemText primary="Microsoft" />
                                 </ListItemButton>
                             </List>
-                                
-                            <List>
-                                <ListItemButton>
-                                    <ListItemText primary="Price Range" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemText primary="CPU Family" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemText primary="Storage Capacity" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemText primary="Screen Size" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemText primary="Memory Size" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemText primary="SSD Capacity" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemText primary="HDD Capacity" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemText primary="Touch Screen" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemText primary="Ram" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemText primary="Drives" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemText primary="Wi-fi" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemText primary="Bluetooth" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemText primary="VR" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemText primary="Weight" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemText primary="Color" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                                <ListItemButton>
-                                    <ListItemText primary="Warranty" />
-                                    {open ? <ExpandLess /> : <ExpandMore />}
-                                </ListItemButton>
-
-                            </List>
-
+                        
                         </Collapse>
+                        
+                            
+                        <ListItemButton>
+                            <ListItemText primary="Price Range" />
+                            {open ? <ExpandLess /> : <ExpandMore />}
+                        </ListItemButton>
+
+                        <ListItemButton>
+                            <ListItemText primary="CPU Family" />
+                            {open ? <ExpandLess /> : <ExpandMore />}
+                        </ListItemButton>
+
+                        
+                        <ListItemButton onClick={handleClick}>
+                            <ListItemText primary="Storage Capacity" />
+                            {open ? <ExpandLess /> : <ExpandMore />}
+                        </ListItemButton>
+                    
+                        <Collapse in={open} timeout="auto" unmountOnExit>
+
+                            <List component="div" disablePadding>
+
+                                <FormGroup sx={{ pl: 4 }}>
+                                    <FormControlLabel control={<Checkbox defaultChecked />} label="Less than 120 GB" />
+
+                                    <FormControlLabel control={<Checkbox defaultChecked />} label="120 GB and up" />
+
+                                    <FormControlLabel control={<Checkbox defaultChecked />} label="250 GB and up" />
+
+                                    <FormControlLabel control={<Checkbox defaultChecked />} label="1 TB and up" />
+                                </FormGroup>
+                                    
+                            </List>
+                        </Collapse>
+                        
+                            {/* <ListItem>
+                                <ListItemButton role={undefined} onClick={handleToggle(value)} dense>
+                                <ListItemIcon>
+                                    <Checkbox
+                                    edge="start"
+                                    checked={checked.indexOf(value) !== -1}
+                                    tabIndex={-1}
+                                    disableRipple
+                                    inputProps={{ 'aria-labelledby': labelId }}
+                                    />
+                                </ListItemIcon>
+                                <ListItemText id={labelId} primary={`Line item ${value + 1}`} />
+                                </ListItemButton>
+                            </ListItem> */}
+
+                        {/* <Box>
+                            <FormControlLabel
+                                label="Less than 120 GB"
+                                control={<checkbox />}
+                            />
+                        </Box> */}
+                        <List>
+
+                            <ListItemButton>
+                                <ListItemText primary="Screen Size" />
+                                {open ? <ExpandLess /> : <ExpandMore />}
+                            </ListItemButton>
+
+                            <ListItemButton>
+                                <ListItemText primary="Memory Size" />
+                                {open ? <ExpandLess /> : <ExpandMore />}
+                            </ListItemButton>
+
+                            <ListItemButton>
+                                <ListItemText primary="SSD Capacity" />
+                                {open ? <ExpandLess /> : <ExpandMore />}
+                            </ListItemButton>
+
+                            <ListItemButton>
+                                <ListItemText primary="HDD Capacity" />
+                                {open ? <ExpandLess /> : <ExpandMore />}
+                            </ListItemButton>
+
+                            <ListItemButton>
+                                <ListItemText primary="Touch Screen" />
+                                {open ? <ExpandLess /> : <ExpandMore />}
+                            </ListItemButton>
+
+                            <ListItemButton>
+                                <ListItemText primary="Ram" />
+                                {open ? <ExpandLess /> : <ExpandMore />}
+                            </ListItemButton>
+
+                            <ListItemButton>
+                                <ListItemText primary="Drives" />
+                                {open ? <ExpandLess /> : <ExpandMore />}
+                            </ListItemButton>
+
+                            <ListItemButton>
+                                <ListItemText primary="Wi-fi" />
+                                {open ? <ExpandLess /> : <ExpandMore />}
+                            </ListItemButton>
+
+                            <ListItemButton>
+                                <ListItemText primary="Bluetooth" />
+                                {open ? <ExpandLess /> : <ExpandMore />}
+                            </ListItemButton>
+
+                            <ListItemButton>
+                                <ListItemText primary="VR" />
+                                {open ? <ExpandLess /> : <ExpandMore />}
+                            </ListItemButton>
+
+                            <ListItemButton>
+                                <ListItemText primary="Weight" />
+                                {open ? <ExpandLess /> : <ExpandMore />}
+                            </ListItemButton>
+
+                            <ListItemButton>
+                                <ListItemText primary="Color" />
+                                {open ? <ExpandLess /> : <ExpandMore />}
+                            </ListItemButton>
+
+                            <ListItemButton>
+                                <ListItemText primary="Warranty" />
+                                {open ? <ExpandLess /> : <ExpandMore />}
+                            </ListItemButton>
+
+                        </List>
 
                     </List>
                 </Typography>

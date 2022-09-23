@@ -1,11 +1,12 @@
 import React from 'react';
 import { 
-    Button, 
+    // Button, 
     Card, 
     CardActions, 
     CardContent, 
     Typography 
 } from '@mui/material';
+import Quiz from "../Quiz";
 
 
 const QuizResultsCard = () => {
@@ -50,7 +51,7 @@ const QuizResultsCard = () => {
                 </Typography>
                 
                 <CardActions>
-                    <Button className="add-to-cart"
+                    {/* <Button className="redo-quiiz"
                         onClick={() => console.log('redo-quiz')}
                         type="submit" 
                         variant="contained"
@@ -61,7 +62,8 @@ const QuizResultsCard = () => {
                         }}
                     >
                     Redo Quiz
-                    </Button>
+                    </Button> */}
+                    <Quiz />
                 
                 </CardActions>
           </CardContent>
