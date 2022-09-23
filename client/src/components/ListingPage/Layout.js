@@ -10,6 +10,7 @@ import Autocomplete, { createFilterOptions } from "@mui/material/Autocomplete";
 import QuizResultsCard from "./QuizResultsCard";
 import Filter from "./Filter.js";
 
+
 const buttons = [
   <Button variant="contained" key="1">
     1
@@ -32,10 +33,11 @@ const resultsFilter = [
   { title: "Price High to Low" },
 ];
 
+
 export default function Layout() {
-  // const classes = useStyles()
 
   return (
+
     <Box Boxspacing={2}>
       <div className="page-nav">
         <p>Home > Computers & Tablets > Laptops > Business Laptops</p>
@@ -133,16 +135,18 @@ export default function Layout() {
 
         <Grid
           container
+          display= "flex"
+          flexDirection= "row"
           spacing={4}
           justifyContent="center"
           alignItems="center"
           paddingTop="61px"
           paddingLeft="526px"
           paddingRight="19px"
-          paddinigBottom="766px"
+          paddingBottom="766px"
           // className={classes.gridContainer}
         >
-          <Grid item lg={3}>
+          <Grid item medium={3}>
             <ProductCard />
           </Grid>
           <Grid item lg={3}>
@@ -153,7 +157,7 @@ export default function Layout() {
           </Grid>
           <Grid item lg={3}>
             <ProductCard />
-          </Grid>
+          </Grid> 
 
           {/* <Grid item lg={3}>
             <ProductCard />
@@ -186,7 +190,7 @@ export default function Layout() {
           <Grid item lg={3}>
             <ProductCard />
           </Grid>
-          <Grid item lg={3}>
+          {/* <Grid item lg={3}>
             <ProductCard />
           </Grid>
           <Grid item lg={3}>
@@ -194,7 +198,7 @@ export default function Layout() {
           </Grid>
           <Grid item lg={3}>
             <ProductCard />
-          </Grid>
+          </Grid> */}
         </Grid> 
 
         <ButtonGroup
