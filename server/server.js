@@ -14,6 +14,9 @@ app.use(require("./routes/productpageComputers.routes.js"));
 app.use(require("./routes/quicksortAlyssa.routes.js"));
 app.use(require("./routes/shopByBrands.routes.js"));
 
+app.use(require("./routes/productpageSuggestions.routes.js"));
+app.use(require("./routes/productpageReviews.routes.js"));
+
 // get driver connection
 const dbo = require("./db/db.js");
 
