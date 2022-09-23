@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    color:"#3577A1";
 }
 
 .title {
@@ -13,9 +14,8 @@
     align-items: center;
     justify-content: space-around;
     margin-bottom: 2rem;;
+    color:white;
+    background-color: #EE8022;
+    ;
 
-}
-
-.object{
-    gap: 4rem;
 }
