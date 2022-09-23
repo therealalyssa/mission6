@@ -8,7 +8,7 @@
     flex-direction: column;
     position: absolute;
     left: 11%;
-    top: 35vh;
+    top: 28vh;
     color: white;
 }
 
@@ -26,7 +26,7 @@
 .hero-image-small-nav {
     position: absolute;
     left: 2%;
-    top: 22vh;
+    top: 16vh;
 }
 
 .hero-image-small-nav-text {

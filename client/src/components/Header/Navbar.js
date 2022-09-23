@@ -2,24 +2,22 @@ import * as React from "react";
 import {
   AppBar,
   Button,
+  IconButton,
   InputBase,
-  // MenuIcon,
   styled,
-  // StyledIconButton,
-  // TextField,
   Toolbar,
   Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
-// import { useState } from 'react';
-import logo from "./logo.png";
+import logo from "../img/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from "@mui/icons-material/Person";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import MenuIcon from "@mui/icons-material/Menu";
-// import { ClassNames } from '@emotion/react';
+import { Link } from "react-router-dom";
+
 
 const StyledButton = styled(Button)({
   backgroundColor: "#1e4261",
@@ -29,9 +27,6 @@ const StyledButton = styled(Button)({
   flexWrap: "nowrap",
 });
 
-// const StyledIconButton = styled(IconButton)({
-//     backgroundColor: '#1e4261'
-// })
 
 function Navbar() {
   const Search = styled("div")(({ theme }) => ({
@@ -44,8 +39,6 @@ function Navbar() {
   const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: "inherit",
     "& .MuiInputBase-input": {
-      //   padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
       paddingLeft: `calc(1em + ${theme.spacing(4)})`,
       transition: theme.transitions.create("width"),
       width: "100%",
@@ -62,7 +55,7 @@ function Navbar() {
             style={{
               backgroundColor: "#214f74",
               width: "100%",
-              height: "136px",
+              height: "95px"
             }}
           >
             <Toolbar className="navbar-row1">
@@ -70,26 +63,21 @@ function Navbar() {
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  justifyContent: "flex-start",
-                  // paddingTop: "16px"
+                  justifyContent: "space-around",
+                  alignItems: "center",
                   width: "100%",
                 }}
                 className="navbar-row1-left"
               >
-                <Typography
-                  noWrap
-                  component="div"
-                  sx={{ mr: 2, display: "none", md: "flex" }}
-                >
-                  <img
-                    component="img"
-                    height="29px"
-                    width="152px"
-                    src={logo}
-                    alt="logo"
-                  />
-                </Typography>
 
+              <IconButton disableRipple>
+                <Link to="/">
+                  <img style={{padding:'1rem', width:'8vw' }} src={logo} alt="PB Tech logo" />
+                </Link>
+              </IconButton>
+
+
+            <div>
                 <Search
                   style={{
                     width: "923px",
@@ -104,32 +92,33 @@ function Navbar() {
                     inputProps={{ "aria-label": "search" }}
                   />
                 </Search>
-              </div>
+                
+                <StyledButton
+                  variant="contained"
+                  size="small"
+                  style={{
+                  backgroundColor: "#E2873C",
+                  }}
+                >
+                  <SearchIcon />
+                </StyledButton>
+                </div>
 
               <div
                 className="navbar-row1-right"
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  justifyContent: "flex-end",
                 }}
               >
-                <StyledButton
-                  variant="contained"
-                  size="small"
-                  style={{
-                    backgroundColor: "#E2873C",
-                  }}
-                >
-                  <SearchIcon />
-                </StyledButton>
 
                 <StyledButton
                   variant="contained"
                   size="xs"
                   startIcon={<PersonIcon />}
                 >
-                  Sign In or Create Account
+                  <Typography sx={{fontSize:'12px', padding:'1rem'}}>Sign In or Create Account</Typography>
+                  
                 </StyledButton>
 
                 <StyledButton
@@ -137,14 +126,18 @@ function Navbar() {
                   size="xs"
                   startIcon={<FavoriteIcon />}
                 >
-                  Wish List
+                   <Typography sx={{fontSize:'12px', padding:'1rem'}}>Wish List</Typography>
+                  
                 </StyledButton>
 
                 <StyledButton variant="contained" size="xs">
                   <ShoppingCartIcon />
                 </StyledButton>
               </div>
+            </div>
             </Toolbar>
+
+
 
             <Toolbar>
               <div
@@ -152,15 +145,15 @@ function Navbar() {
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  justifyContent: "space-evenly",
+                  justifyContent: "space-around",
                   width: "100%",
+                  marginBottom:'2.2rem'
                 }}
               >
                 <div
                   className="navbar-row2-left"
                   style={{
                     display: "flex",
-                    justifyContent: "flex-start",
                     fontSize: "20px",
                     fontWeight: "600",
                   }}
@@ -172,18 +165,29 @@ function Navbar() {
                 <div
                   style={{
                     display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-evenly",
                   }}
-                >
-                  Brands Services Promotions Clearance New Arrivals Tax Free
-                  Shipping BYOD Returns & Warranty Careers Help and support
-                </div>
+                > 
+                  <Typography sx={{marginRight:'1rem'}}>Brands</Typography>
+                  <Typography sx={{marginRight:'1rem'}}>Services</Typography>
+                  <Typography sx={{marginRight:'1rem'}}>Promotions</Typography>
+                  <Typography sx={{marginRight:'1rem'}}>Clearance</Typography>
+                  <Typography sx={{marginRight:'1rem'}}>New Arrivals</Typography>
+                  <Typography sx={{marginRight:'1rem'}}>Tax Free Shipping</Typography>
+                  <Typography sx={{marginRight:'1rem'}}>BYOD</Typography>
+               </div>
+
+               <div style={{
+                    display: "flex",
+                    alignContent:'space-around'}}>
+               <Typography sx={{marginRight:'1rem'}}>Returns & Warranty</Typography>
+                  <Typography sx={{marginRight:'1rem'}}>Careers</Typography>
+                  <Typography sx={{marginRight:'1rem'}}>Help and support</Typography>
+               </div>
 
                 <div>
-                  <StorefrontIcon />
-                  Stores
+                  <Typography><StorefrontIcon />  Stores</Typography>
                 </div>
+
               </div>
             </Toolbar>
           </AppBar>
