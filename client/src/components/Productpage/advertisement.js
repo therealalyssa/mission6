@@ -22,7 +22,7 @@ const Advertisement = () => {
           float: "right",
           flexDirection: "column",
           width: "25%",
-          height: "2000px",
+          height: "3000px",
           // border: "2px solid #3577A1",
           backgroundColor: "#F9FBFF",
         }}
@@ -398,13 +398,20 @@ const Advertisement = () => {
               backgroundColor: "#3577A1",
               color: "white",
               fontWeight: "bold",
+              textAlign: "center",
             }}
           >
             {" "}
             <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             Still not sure? <br></br>Take our quiz to find <br></br>the best
             laptop for you! <br></br>
           </Box>
+        </Box>
+        <Box>
+          <br></br>
         </Box>
         <Box
           sx={{ display: "flex", justifyContent: "center" }}

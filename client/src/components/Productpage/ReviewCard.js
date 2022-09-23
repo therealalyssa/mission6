@@ -17,7 +17,7 @@ const ReviewCard = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5001/reviews`)
+      .get(`http://localhost:5001/reviews2`)
       .then((response) => {
         setReviews(response.data);
         // console.log(response.data);
@@ -54,7 +54,7 @@ const ReviewCard = () => {
       >
         <NavigateLeftButton />
 
-        {reviews.slice(0, 2).map((result) => {
+        {reviews.map((result) => {
           return (
             <Card
               key={result._id}

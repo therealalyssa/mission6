@@ -90,7 +90,7 @@ const ProductCarousel = () => {
           </Box>
         </Box>
         <Box className="rightsidetext3">
-          <Box ontSize="1.6rem" fontWeight="bold" color="orange">
+          <Box fontSize="1.6rem" fontWeight="bold" color="orange">
             {" "}
             $1,534{" "}
           </Box>
