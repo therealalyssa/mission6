@@ -56,7 +56,7 @@ const ProductInfo = () => {
           flexDirection: "column",
           width: "74%",
           height: "2000px",
-          border: "2px solid #3577A1",
+          // border: "2px solid #3577A1",
         }}
       >
         <Box>
