@@ -3,12 +3,10 @@ import { Box, ImageList, Button } from "@mui/material";
 import ImageSlider from "./ImageSlider";
 import { SliderData } from "./SliderData";
 import "./ProductCarousel.css";
-import "./../Homepage/HeroImage.css";
 import { Link } from "@mui/material";
 import GP from "./../img/gp.png";
 import ImageListItem from "@mui/material/ImageListItem";
 import Rating from "@mui/material/Rating";
-
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
